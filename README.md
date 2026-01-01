@@ -185,3 +185,5 @@ Reproducible
 Interpretable
 Extensible
 Grounded in verifiable mathematics
+
+THIS PROJECT IS STILL IN PROGRESS.
