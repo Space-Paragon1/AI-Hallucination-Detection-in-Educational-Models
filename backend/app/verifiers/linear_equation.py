@@ -11,6 +11,13 @@ def simple_linear_equation_plug_in(question: str, x_value: float) -> Tuple[bool,
     - Plugs x_value and checks equality
     """
     eq = question.replace(" ", "")
+
+# Convert implicit multiplication like 3(x-2) -> 3*(x-2)
+    eq = re.sub(r"(\d)(\()", r"\1*\2", eq)
+# Convert x(x+1) -> x*(x+1)
+    eq = re.sub(r"(x)(\()", r"\1*\2", eq)
+# Convert )( -> )*(
+    eq = re.sub(r"(\))(\()", r"\1*\2", eq)
     m = _EQ_RE.search(eq)
     if not m:
         return False, "no_equation_found"
