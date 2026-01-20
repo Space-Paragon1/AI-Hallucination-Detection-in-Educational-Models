@@ -1,3 +1,11 @@
+# experiments/train.py
+import sys
+from pathlib import Path
+
+# Add repo root to Python path so `import backend...` works reliably
+REPO_ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(REPO_ROOT))
+
 import json
 from pathlib import Path
 import numpy as np
