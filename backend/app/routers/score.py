@@ -12,13 +12,22 @@ _model, _vec = load_artifacts()
 def score(req: ScoreRequest):
     feats = build_features(req.question, req.model_answer)
 
+    heur = heuristic_risk(feats)
+
     if _model is None or _vec is None:
-        risk = heuristic_risk(feats)
+        risk = heur
     else:
-        # remove non-numeric/string fields that DictVectorizer didn't see during training
-        feats_numeric = {k: v for k, v in feats.items() if k != "eq_note"}
+        # remove string fields not seen during training
+        feats_numeric = {
+            k: v
+            for k, v in feats.items()
+            if k not in ("eq_note", "step_note", "calc_note", "calc_kind")
+        }
         X = _vec.transform([feats_numeric])
-        risk = float(_model.predict_proba(X)[0, 1])
+        ml_risk = float(_model.predict_proba(X)[0, 1])
+
+        # IMPORTANT: let verifier/heuristics override ML when needed
+        risk = max(ml_risk, heur)
 
     label, action = policy_from_risk(risk)
     reasons = reasons_from_signals(feats)
