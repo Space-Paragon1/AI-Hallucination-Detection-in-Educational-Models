@@ -43,8 +43,8 @@ backend/models/*.pkl
 # =========================
 # Data (raw / generated)
 # =========================
-backend/app/data/*.jsonl
-backend/app/data/feedback.jsonl
+#backend/app/data/*.jsonl
+#backend/app/data/feedback.jsonl
 
 # Keep empty folders
 !backend/app/data/.gitkeep
