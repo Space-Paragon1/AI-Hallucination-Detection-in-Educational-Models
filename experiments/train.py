@@ -42,7 +42,7 @@ def main():
     y = []
     for r in rows:
         feats = build_features(r["question"], r["model_answer"])
-        feats = {k: v for k, v in feats.items() if k != "eq_note"}  # drop string field
+        feats = {k: v for k, v in feats.items() if k not in ("eq_note", "step_note", "calc_note", "calc_kind")}
         X_dict.append(feats)
         y.append(int(r["label_hallucinated"]))
 
