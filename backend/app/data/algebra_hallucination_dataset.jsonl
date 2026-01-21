@@ -1,0 +1,300 @@
+{"id": "a004", "question": "Solve for x: x + 5 = 12", "student_level": "Algebra I", "model_answer": "Solving gives x = 7", "label_hallucinated": 0, "error_type": "none", "severity": 0}
+{"id": "a005", "question": "Solve for x: x + 5 = 12", "student_level": "Algebra I", "model_answer": "Solving gives x = 9", "label_hallucinated": 1, "error_type": "arithmetic", "severity": 2}
+{"id": "a006", "question": "Solve for x: x + 5 = 12", "student_level": "Algebra I", "model_answer": "Subtracting constants shows x is close to 7", "label_hallucinated": 1, "error_type": "reasoning_gap", "severity": 3}
+{"id": "a007", "question": "Solve for x: x + 5 = 12", "student_level": "Algebra I", "model_answer": "Solving gives x = 7", "label_hallucinated": 0, "error_type": "none", "severity": 0}
+{"id": "a008", "question": "Solve for x: x + 5 = 12", "student_level": "Algebra I", "model_answer": "Solving gives x = 9", "label_hallucinated": 1, "error_type": "arithmetic", "severity": 2}
+{"id": "a009", "question": "Solve for x: x + 5 = 12", "student_level": "Algebra I", "model_answer": "Subtracting constants shows x is close to 7", "label_hallucinated": 1, "error_type": "reasoning_gap", "severity": 3}
+{"id": "a010", "question": "Solve for x: x + 5 = 12", "student_level": "Algebra I", "model_answer": "Solving gives x = 7", "label_hallucinated": 0, "error_type": "none", "severity": 0}
+{"id": "a011", "question": "Solve for x: x + 5 = 12", "student_level": "Algebra I", "model_answer": "Solving gives x = 9", "label_hallucinated": 1, "error_type": "arithmetic", "severity": 2}
+{"id": "a012", "question": "Solve for x: x + 5 = 12", "student_level": "Algebra I", "model_answer": "Subtracting constants shows x is close to 7", "label_hallucinated": 1, "error_type": "reasoning_gap", "severity": 3}
+{"id": "a013", "question": "Solve for x: x + 5 = 12", "student_level": "Algebra I", "model_answer": "Solving gives x = 7", "label_hallucinated": 0, "error_type": "none", "severity": 0}
+{"id": "a014", "question": "Solve for x: x + 5 = 12", "student_level": "Algebra I", "model_answer": "Solving gives x = 9", "label_hallucinated": 1, "error_type": "arithmetic", "severity": 2}
+{"id": "a015", "question": "Solve for x: x + 5 = 12", "student_level": "Algebra I", "model_answer": "Subtracting constants shows x is close to 7", "label_hallucinated": 1, "error_type": "reasoning_gap", "severity": 3}
+{"id": "a016", "question": "Solve for x: x + 5 = 12", "student_level": "Algebra I", "model_answer": "Solving gives x = 7", "label_hallucinated": 0, "error_type": "none", "severity": 0}
+{"id": "a017", "question": "Solve for x: x + 5 = 12", "student_level": "Algebra I", "model_answer": "Solving gives x = 9", "label_hallucinated": 1, "error_type": "arithmetic", "severity": 2}
+{"id": "a018", "question": "Solve for x: x + 5 = 12", "student_level": "Algebra I", "model_answer": "Subtracting constants shows x is close to 7", "label_hallucinated": 1, "error_type": "reasoning_gap", "severity": 3}
+{"id": "a019", "question": "Solve for x: x + 5 = 12", "student_level": "Algebra I", "model_answer": "Solving gives x = 7", "label_hallucinated": 0, "error_type": "none", "severity": 0}
+{"id": "a020", "question": "Solve for x: x + 5 = 12", "student_level": "Algebra I", "model_answer": "Solving gives x = 9", "label_hallucinated": 1, "error_type": "arithmetic", "severity": 2}
+{"id": "a021", "question": "Solve for x: x + 5 = 12", "student_level": "Algebra I", "model_answer": "Subtracting constants shows x is close to 7", "label_hallucinated": 1, "error_type": "reasoning_gap", "severity": 3}
+{"id": "a022", "question": "Solve for x: x + 5 = 12", "student_level": "Algebra I", "model_answer": "Solving gives x = 7", "label_hallucinated": 0, "error_type": "none", "severity": 0}
+{"id": "a023", "question": "Solve for x: x + 5 = 12", "student_level": "Algebra I", "model_answer": "Solving gives x = 9", "label_hallucinated": 1, "error_type": "arithmetic", "severity": 2}
+{"id": "a024", "question": "Solve for x: x + 5 = 12", "student_level": "Algebra I", "model_answer": "Subtracting constants shows x is close to 7", "label_hallucinated": 1, "error_type": "reasoning_gap", "severity": 3}
+{"id": "a025", "question": "Solve for x: x + 5 = 12", "student_level": "Algebra I", "model_answer": "Solving gives x = 7", "label_hallucinated": 0, "error_type": "none", "severity": 0}
+{"id": "a026", "question": "Solve for x: x + 5 = 12", "student_level": "Algebra I", "model_answer": "Solving gives x = 9", "label_hallucinated": 1, "error_type": "arithmetic", "severity": 2}
+{"id": "a027", "question": "Solve for x: x + 5 = 12", "student_level": "Algebra I", "model_answer": "Subtracting constants shows x is close to 7", "label_hallucinated": 1, "error_type": "reasoning_gap", "severity": 3}
+{"id": "a028", "question": "Solve for x: x + 5 = 12", "student_level": "Algebra I", "model_answer": "Solving gives x = 7", "label_hallucinated": 0, "error_type": "none", "severity": 0}
+{"id": "a029", "question": "Solve for x: x + 5 = 12", "student_level": "Algebra I", "model_answer": "Solving gives x = 9", "label_hallucinated": 1, "error_type": "arithmetic", "severity": 2}
+{"id": "a030", "question": "Solve for x: x + 5 = 12", "student_level": "Algebra I", "model_answer": "Subtracting constants shows x is close to 7", "label_hallucinated": 1, "error_type": "reasoning_gap", "severity": 3}
+{"id": "a031", "question": "Solve for x: x + 5 = 12", "student_level": "Algebra I", "model_answer": "Solving gives x = 7", "label_hallucinated": 0, "error_type": "none", "severity": 0}
+{"id": "a032", "question": "Solve for x: x + 5 = 12", "student_level": "Algebra I", "model_answer": "Solving gives x = 9", "label_hallucinated": 1, "error_type": "arithmetic", "severity": 2}
+{"id": "a033", "question": "Solve for x: x + 5 = 12", "student_level": "Algebra I", "model_answer": "Subtracting constants shows x is close to 7", "label_hallucinated": 1, "error_type": "reasoning_gap", "severity": 3}
+{"id": "a034", "question": "Solve for x: x - 4 = 9", "student_level": "Algebra I", "model_answer": "Solving gives x = 13", "label_hallucinated": 0, "error_type": "none", "severity": 0}
+{"id": "a035", "question": "Solve for x: x - 4 = 9", "student_level": "Algebra I", "model_answer": "Solving gives x = 15", "label_hallucinated": 1, "error_type": "arithmetic", "severity": 2}
+{"id": "a036", "question": "Solve for x: x - 4 = 9", "student_level": "Algebra I", "model_answer": "Subtracting constants shows x is close to 13", "label_hallucinated": 1, "error_type": "reasoning_gap", "severity": 3}
+{"id": "a037", "question": "Solve for x: x - 4 = 9", "student_level": "Algebra I", "model_answer": "Solving gives x = 13", "label_hallucinated": 0, "error_type": "none", "severity": 0}
+{"id": "a038", "question": "Solve for x: x - 4 = 9", "student_level": "Algebra I", "model_answer": "Solving gives x = 15", "label_hallucinated": 1, "error_type": "arithmetic", "severity": 2}
+{"id": "a039", "question": "Solve for x: x - 4 = 9", "student_level": "Algebra I", "model_answer": "Subtracting constants shows x is close to 13", "label_hallucinated": 1, "error_type": "reasoning_gap", "severity": 3}
+{"id": "a040", "question": "Solve for x: x - 4 = 9", "student_level": "Algebra I", "model_answer": "Solving gives x = 13", "label_hallucinated": 0, "error_type": "none", "severity": 0}
+{"id": "a041", "question": "Solve for x: x - 4 = 9", "student_level": "Algebra I", "model_answer": "Solving gives x = 15", "label_hallucinated": 1, "error_type": "arithmetic", "severity": 2}
+{"id": "a042", "question": "Solve for x: x - 4 = 9", "student_level": "Algebra I", "model_answer": "Subtracting constants shows x is close to 13", "label_hallucinated": 1, "error_type": "reasoning_gap", "severity": 3}
+{"id": "a043", "question": "Solve for x: x - 4 = 9", "student_level": "Algebra I", "model_answer": "Solving gives x = 13", "label_hallucinated": 0, "error_type": "none", "severity": 0}
+{"id": "a044", "question": "Solve for x: x - 4 = 9", "student_level": "Algebra I", "model_answer": "Solving gives x = 15", "label_hallucinated": 1, "error_type": "arithmetic", "severity": 2}
+{"id": "a045", "question": "Solve for x: x - 4 = 9", "student_level": "Algebra I", "model_answer": "Subtracting constants shows x is close to 13", "label_hallucinated": 1, "error_type": "reasoning_gap", "severity": 3}
+{"id": "a046", "question": "Solve for x: x - 4 = 9", "student_level": "Algebra I", "model_answer": "Solving gives x = 13", "label_hallucinated": 0, "error_type": "none", "severity": 0}
+{"id": "a047", "question": "Solve for x: x - 4 = 9", "student_level": "Algebra I", "model_answer": "Solving gives x = 15", "label_hallucinated": 1, "error_type": "arithmetic", "severity": 2}
+{"id": "a048", "question": "Solve for x: x - 4 = 9", "student_level": "Algebra I", "model_answer": "Subtracting constants shows x is close to 13", "label_hallucinated": 1, "error_type": "reasoning_gap", "severity": 3}
+{"id": "a049", "question": "Solve for x: x - 4 = 9", "student_level": "Algebra I", "model_answer": "Solving gives x = 13", "label_hallucinated": 0, "error_type": "none", "severity": 0}
+{"id": "a050", "question": "Solve for x: x - 4 = 9", "student_level": "Algebra I", "model_answer": "Solving gives x = 15", "label_hallucinated": 1, "error_type": "arithmetic", "severity": 2}
+{"id": "a051", "question": "Solve for x: x - 4 = 9", "student_level": "Algebra I", "model_answer": "Subtracting constants shows x is close to 13", "label_hallucinated": 1, "error_type": "reasoning_gap", "severity": 3}
+{"id": "a052", "question": "Solve for x: x - 4 = 9", "student_level": "Algebra I", "model_answer": "Solving gives x = 13", "label_hallucinated": 0, "error_type": "none", "severity": 0}
+{"id": "a053", "question": "Solve for x: x - 4 = 9", "student_level": "Algebra I", "model_answer": "Solving gives x = 15", "label_hallucinated": 1, "error_type": "arithmetic", "severity": 2}
+{"id": "a054", "question": "Solve for x: x - 4 = 9", "student_level": "Algebra I", "model_answer": "Subtracting constants shows x is close to 13", "label_hallucinated": 1, "error_type": "reasoning_gap", "severity": 3}
+{"id": "a055", "question": "Solve for x: x - 4 = 9", "student_level": "Algebra I", "model_answer": "Solving gives x = 13", "label_hallucinated": 0, "error_type": "none", "severity": 0}
+{"id": "a056", "question": "Solve for x: x - 4 = 9", "student_level": "Algebra I", "model_answer": "Solving gives x = 15", "label_hallucinated": 1, "error_type": "arithmetic", "severity": 2}
+{"id": "a057", "question": "Solve for x: x - 4 = 9", "student_level": "Algebra I", "model_answer": "Subtracting constants shows x is close to 13", "label_hallucinated": 1, "error_type": "reasoning_gap", "severity": 3}
+{"id": "a058", "question": "Solve for x: x - 4 = 9", "student_level": "Algebra I", "model_answer": "Solving gives x = 13", "label_hallucinated": 0, "error_type": "none", "severity": 0}
+{"id": "a059", "question": "Solve for x: x - 4 = 9", "student_level": "Algebra I", "model_answer": "Solving gives x = 15", "label_hallucinated": 1, "error_type": "arithmetic", "severity": 2}
+{"id": "a060", "question": "Solve for x: x - 4 = 9", "student_level": "Algebra I", "model_answer": "Subtracting constants shows x is close to 13", "label_hallucinated": 1, "error_type": "reasoning_gap", "severity": 3}
+{"id": "a061", "question": "Solve for x: x - 4 = 9", "student_level": "Algebra I", "model_answer": "Solving gives x = 13", "label_hallucinated": 0, "error_type": "none", "severity": 0}
+{"id": "a062", "question": "Solve for x: x - 4 = 9", "student_level": "Algebra I", "model_answer": "Solving gives x = 15", "label_hallucinated": 1, "error_type": "arithmetic", "severity": 2}
+{"id": "a063", "question": "Solve for x: x - 4 = 9", "student_level": "Algebra I", "model_answer": "Subtracting constants shows x is close to 13", "label_hallucinated": 1, "error_type": "reasoning_gap", "severity": 3}
+{"id": "a064", "question": "Solve for x: 2x = 10", "student_level": "Algebra I", "model_answer": "Solving gives x = 5", "label_hallucinated": 0, "error_type": "none", "severity": 0}
+{"id": "a065", "question": "Solve for x: 2x = 10", "student_level": "Algebra I", "model_answer": "Solving gives x = 7", "label_hallucinated": 1, "error_type": "arithmetic", "severity": 2}
+{"id": "a066", "question": "Solve for x: 2x = 10", "student_level": "Algebra I", "model_answer": "Subtracting constants shows x is close to 5", "label_hallucinated": 1, "error_type": "reasoning_gap", "severity": 3}
+{"id": "a067", "question": "Solve for x: 2x = 10", "student_level": "Algebra I", "model_answer": "Solving gives x = 5", "label_hallucinated": 0, "error_type": "none", "severity": 0}
+{"id": "a068", "question": "Solve for x: 2x = 10", "student_level": "Algebra I", "model_answer": "Solving gives x = 7", "label_hallucinated": 1, "error_type": "arithmetic", "severity": 2}
+{"id": "a069", "question": "Solve for x: 2x = 10", "student_level": "Algebra I", "model_answer": "Subtracting constants shows x is close to 5", "label_hallucinated": 1, "error_type": "reasoning_gap", "severity": 3}
+{"id": "a070", "question": "Solve for x: 2x = 10", "student_level": "Algebra I", "model_answer": "Solving gives x = 5", "label_hallucinated": 0, "error_type": "none", "severity": 0}
+{"id": "a071", "question": "Solve for x: 2x = 10", "student_level": "Algebra I", "model_answer": "Solving gives x = 7", "label_hallucinated": 1, "error_type": "arithmetic", "severity": 2}
+{"id": "a072", "question": "Solve for x: 2x = 10", "student_level": "Algebra I", "model_answer": "Subtracting constants shows x is close to 5", "label_hallucinated": 1, "error_type": "reasoning_gap", "severity": 3}
+{"id": "a073", "question": "Solve for x: 2x = 10", "student_level": "Algebra I", "model_answer": "Solving gives x = 5", "label_hallucinated": 0, "error_type": "none", "severity": 0}
+{"id": "a074", "question": "Solve for x: 2x = 10", "student_level": "Algebra I", "model_answer": "Solving gives x = 7", "label_hallucinated": 1, "error_type": "arithmetic", "severity": 2}
+{"id": "a075", "question": "Solve for x: 2x = 10", "student_level": "Algebra I", "model_answer": "Subtracting constants shows x is close to 5", "label_hallucinated": 1, "error_type": "reasoning_gap", "severity": 3}
+{"id": "a076", "question": "Solve for x: 2x = 10", "student_level": "Algebra I", "model_answer": "Solving gives x = 5", "label_hallucinated": 0, "error_type": "none", "severity": 0}
+{"id": "a077", "question": "Solve for x: 2x = 10", "student_level": "Algebra I", "model_answer": "Solving gives x = 7", "label_hallucinated": 1, "error_type": "arithmetic", "severity": 2}
+{"id": "a078", "question": "Solve for x: 2x = 10", "student_level": "Algebra I", "model_answer": "Subtracting constants shows x is close to 5", "label_hallucinated": 1, "error_type": "reasoning_gap", "severity": 3}
+{"id": "a079", "question": "Solve for x: 2x = 10", "student_level": "Algebra I", "model_answer": "Solving gives x = 5", "label_hallucinated": 0, "error_type": "none", "severity": 0}
+{"id": "a080", "question": "Solve for x: 2x = 10", "student_level": "Algebra I", "model_answer": "Solving gives x = 7", "label_hallucinated": 1, "error_type": "arithmetic", "severity": 2}
+{"id": "a081", "question": "Solve for x: 2x = 10", "student_level": "Algebra I", "model_answer": "Subtracting constants shows x is close to 5", "label_hallucinated": 1, "error_type": "reasoning_gap", "severity": 3}
+{"id": "a082", "question": "Solve for x: 2x = 10", "student_level": "Algebra I", "model_answer": "Solving gives x = 5", "label_hallucinated": 0, "error_type": "none", "severity": 0}
+{"id": "a083", "question": "Solve for x: 2x = 10", "student_level": "Algebra I", "model_answer": "Solving gives x = 7", "label_hallucinated": 1, "error_type": "arithmetic", "severity": 2}
+{"id": "a084", "question": "Solve for x: 2x = 10", "student_level": "Algebra I", "model_answer": "Subtracting constants shows x is close to 5", "label_hallucinated": 1, "error_type": "reasoning_gap", "severity": 3}
+{"id": "a085", "question": "Solve for x: 2x = 10", "student_level": "Algebra I", "model_answer": "Solving gives x = 5", "label_hallucinated": 0, "error_type": "none", "severity": 0}
+{"id": "a086", "question": "Solve for x: 2x = 10", "student_level": "Algebra I", "model_answer": "Solving gives x = 7", "label_hallucinated": 1, "error_type": "arithmetic", "severity": 2}
+{"id": "a087", "question": "Solve for x: 2x = 10", "student_level": "Algebra I", "model_answer": "Subtracting constants shows x is close to 5", "label_hallucinated": 1, "error_type": "reasoning_gap", "severity": 3}
+{"id": "a088", "question": "Solve for x: 2x = 10", "student_level": "Algebra I", "model_answer": "Solving gives x = 5", "label_hallucinated": 0, "error_type": "none", "severity": 0}
+{"id": "a089", "question": "Solve for x: 2x = 10", "student_level": "Algebra I", "model_answer": "Solving gives x = 7", "label_hallucinated": 1, "error_type": "arithmetic", "severity": 2}
+{"id": "a090", "question": "Solve for x: 2x = 10", "student_level": "Algebra I", "model_answer": "Subtracting constants shows x is close to 5", "label_hallucinated": 1, "error_type": "reasoning_gap", "severity": 3}
+{"id": "a091", "question": "Solve for x: 2x = 10", "student_level": "Algebra I", "model_answer": "Solving gives x = 5", "label_hallucinated": 0, "error_type": "none", "severity": 0}
+{"id": "a092", "question": "Solve for x: 2x = 10", "student_level": "Algebra I", "model_answer": "Solving gives x = 7", "label_hallucinated": 1, "error_type": "arithmetic", "severity": 2}
+{"id": "a093", "question": "Solve for x: 2x = 10", "student_level": "Algebra I", "model_answer": "Subtracting constants shows x is close to 5", "label_hallucinated": 1, "error_type": "reasoning_gap", "severity": 3}
+{"id": "a094", "question": "Solve for x: 3x = 21", "student_level": "Algebra I", "model_answer": "Solving gives x = 7", "label_hallucinated": 0, "error_type": "none", "severity": 0}
+{"id": "a095", "question": "Solve for x: 3x = 21", "student_level": "Algebra I", "model_answer": "Solving gives x = 9", "label_hallucinated": 1, "error_type": "arithmetic", "severity": 2}
+{"id": "a096", "question": "Solve for x: 3x = 21", "student_level": "Algebra I", "model_answer": "Subtracting constants shows x is close to 7", "label_hallucinated": 1, "error_type": "reasoning_gap", "severity": 3}
+{"id": "a097", "question": "Solve for x: 3x = 21", "student_level": "Algebra I", "model_answer": "Solving gives x = 7", "label_hallucinated": 0, "error_type": "none", "severity": 0}
+{"id": "a098", "question": "Solve for x: 3x = 21", "student_level": "Algebra I", "model_answer": "Solving gives x = 9", "label_hallucinated": 1, "error_type": "arithmetic", "severity": 2}
+{"id": "a099", "question": "Solve for x: 3x = 21", "student_level": "Algebra I", "model_answer": "Subtracting constants shows x is close to 7", "label_hallucinated": 1, "error_type": "reasoning_gap", "severity": 3}
+{"id": "a100", "question": "Solve for x: 3x = 21", "student_level": "Algebra I", "model_answer": "Solving gives x = 7", "label_hallucinated": 0, "error_type": "none", "severity": 0}
+{"id": "a101", "question": "Solve for x: 3x = 21", "student_level": "Algebra I", "model_answer": "Solving gives x = 9", "label_hallucinated": 1, "error_type": "arithmetic", "severity": 2}
+{"id": "a102", "question": "Solve for x: 3x = 21", "student_level": "Algebra I", "model_answer": "Subtracting constants shows x is close to 7", "label_hallucinated": 1, "error_type": "reasoning_gap", "severity": 3}
+{"id": "a103", "question": "Solve for x: 3x = 21", "student_level": "Algebra I", "model_answer": "Solving gives x = 7", "label_hallucinated": 0, "error_type": "none", "severity": 0}
+{"id": "a104", "question": "Solve for x: 3x = 21", "student_level": "Algebra I", "model_answer": "Solving gives x = 9", "label_hallucinated": 1, "error_type": "arithmetic", "severity": 2}
+{"id": "a105", "question": "Solve for x: 3x = 21", "student_level": "Algebra I", "model_answer": "Subtracting constants shows x is close to 7", "label_hallucinated": 1, "error_type": "reasoning_gap", "severity": 3}
+{"id": "a106", "question": "Solve for x: 3x = 21", "student_level": "Algebra I", "model_answer": "Solving gives x = 7", "label_hallucinated": 0, "error_type": "none", "severity": 0}
+{"id": "a107", "question": "Solve for x: 3x = 21", "student_level": "Algebra I", "model_answer": "Solving gives x = 9", "label_hallucinated": 1, "error_type": "arithmetic", "severity": 2}
+{"id": "a108", "question": "Solve for x: 3x = 21", "student_level": "Algebra I", "model_answer": "Subtracting constants shows x is close to 7", "label_hallucinated": 1, "error_type": "reasoning_gap", "severity": 3}
+{"id": "a109", "question": "Solve for x: 3x = 21", "student_level": "Algebra I", "model_answer": "Solving gives x = 7", "label_hallucinated": 0, "error_type": "none", "severity": 0}
+{"id": "a110", "question": "Solve for x: 3x = 21", "student_level": "Algebra I", "model_answer": "Solving gives x = 9", "label_hallucinated": 1, "error_type": "arithmetic", "severity": 2}
+{"id": "a111", "question": "Solve for x: 3x = 21", "student_level": "Algebra I", "model_answer": "Subtracting constants shows x is close to 7", "label_hallucinated": 1, "error_type": "reasoning_gap", "severity": 3}
+{"id": "a112", "question": "Solve for x: 3x = 21", "student_level": "Algebra I", "model_answer": "Solving gives x = 7", "label_hallucinated": 0, "error_type": "none", "severity": 0}
+{"id": "a113", "question": "Solve for x: 3x = 21", "student_level": "Algebra I", "model_answer": "Solving gives x = 9", "label_hallucinated": 1, "error_type": "arithmetic", "severity": 2}
+{"id": "a114", "question": "Solve for x: 3x = 21", "student_level": "Algebra I", "model_answer": "Subtracting constants shows x is close to 7", "label_hallucinated": 1, "error_type": "reasoning_gap", "severity": 3}
+{"id": "a115", "question": "Solve for x: 3x = 21", "student_level": "Algebra I", "model_answer": "Solving gives x = 7", "label_hallucinated": 0, "error_type": "none", "severity": 0}
+{"id": "a116", "question": "Solve for x: 3x = 21", "student_level": "Algebra I", "model_answer": "Solving gives x = 9", "label_hallucinated": 1, "error_type": "arithmetic", "severity": 2}
+{"id": "a117", "question": "Solve for x: 3x = 21", "student_level": "Algebra I", "model_answer": "Subtracting constants shows x is close to 7", "label_hallucinated": 1, "error_type": "reasoning_gap", "severity": 3}
+{"id": "a118", "question": "Solve for x: 3x = 21", "student_level": "Algebra I", "model_answer": "Solving gives x = 7", "label_hallucinated": 0, "error_type": "none", "severity": 0}
+{"id": "a119", "question": "Solve for x: 3x = 21", "student_level": "Algebra I", "model_answer": "Solving gives x = 9", "label_hallucinated": 1, "error_type": "arithmetic", "severity": 2}
+{"id": "a120", "question": "Solve for x: 3x = 21", "student_level": "Algebra I", "model_answer": "Subtracting constants shows x is close to 7", "label_hallucinated": 1, "error_type": "reasoning_gap", "severity": 3}
+{"id": "a121", "question": "Solve for x: 3x = 21", "student_level": "Algebra I", "model_answer": "Solving gives x = 7", "label_hallucinated": 0, "error_type": "none", "severity": 0}
+{"id": "a122", "question": "Solve for x: 3x = 21", "student_level": "Algebra I", "model_answer": "Solving gives x = 9", "label_hallucinated": 1, "error_type": "arithmetic", "severity": 2}
+{"id": "a123", "question": "Solve for x: 3x = 21", "student_level": "Algebra I", "model_answer": "Subtracting constants shows x is close to 7", "label_hallucinated": 1, "error_type": "reasoning_gap", "severity": 3}
+{"id": "a124", "question": "Solve for x: x / 5 = 6", "student_level": "Algebra I", "model_answer": "Solving gives x = 30", "label_hallucinated": 0, "error_type": "none", "severity": 0}
+{"id": "a125", "question": "Solve for x: x / 5 = 6", "student_level": "Algebra I", "model_answer": "Solving gives x = 32", "label_hallucinated": 1, "error_type": "arithmetic", "severity": 2}
+{"id": "a126", "question": "Solve for x: x / 5 = 6", "student_level": "Algebra I", "model_answer": "Subtracting constants shows x is close to 30", "label_hallucinated": 1, "error_type": "reasoning_gap", "severity": 3}
+{"id": "a127", "question": "Solve for x: x / 5 = 6", "student_level": "Algebra I", "model_answer": "Solving gives x = 30", "label_hallucinated": 0, "error_type": "none", "severity": 0}
+{"id": "a128", "question": "Solve for x: x / 5 = 6", "student_level": "Algebra I", "model_answer": "Solving gives x = 32", "label_hallucinated": 1, "error_type": "arithmetic", "severity": 2}
+{"id": "a129", "question": "Solve for x: x / 5 = 6", "student_level": "Algebra I", "model_answer": "Subtracting constants shows x is close to 30", "label_hallucinated": 1, "error_type": "reasoning_gap", "severity": 3}
+{"id": "a130", "question": "Solve for x: x / 5 = 6", "student_level": "Algebra I", "model_answer": "Solving gives x = 30", "label_hallucinated": 0, "error_type": "none", "severity": 0}
+{"id": "a131", "question": "Solve for x: x / 5 = 6", "student_level": "Algebra I", "model_answer": "Solving gives x = 32", "label_hallucinated": 1, "error_type": "arithmetic", "severity": 2}
+{"id": "a132", "question": "Solve for x: x / 5 = 6", "student_level": "Algebra I", "model_answer": "Subtracting constants shows x is close to 30", "label_hallucinated": 1, "error_type": "reasoning_gap", "severity": 3}
+{"id": "a133", "question": "Solve for x: x / 5 = 6", "student_level": "Algebra I", "model_answer": "Solving gives x = 30", "label_hallucinated": 0, "error_type": "none", "severity": 0}
+{"id": "a134", "question": "Solve for x: x / 5 = 6", "student_level": "Algebra I", "model_answer": "Solving gives x = 32", "label_hallucinated": 1, "error_type": "arithmetic", "severity": 2}
+{"id": "a135", "question": "Solve for x: x / 5 = 6", "student_level": "Algebra I", "model_answer": "Subtracting constants shows x is close to 30", "label_hallucinated": 1, "error_type": "reasoning_gap", "severity": 3}
+{"id": "a136", "question": "Solve for x: x / 5 = 6", "student_level": "Algebra I", "model_answer": "Solving gives x = 30", "label_hallucinated": 0, "error_type": "none", "severity": 0}
+{"id": "a137", "question": "Solve for x: x / 5 = 6", "student_level": "Algebra I", "model_answer": "Solving gives x = 32", "label_hallucinated": 1, "error_type": "arithmetic", "severity": 2}
+{"id": "a138", "question": "Solve for x: x / 5 = 6", "student_level": "Algebra I", "model_answer": "Subtracting constants shows x is close to 30", "label_hallucinated": 1, "error_type": "reasoning_gap", "severity": 3}
+{"id": "a139", "question": "Solve for x: x / 5 = 6", "student_level": "Algebra I", "model_answer": "Solving gives x = 30", "label_hallucinated": 0, "error_type": "none", "severity": 0}
+{"id": "a140", "question": "Solve for x: x / 5 = 6", "student_level": "Algebra I", "model_answer": "Solving gives x = 32", "label_hallucinated": 1, "error_type": "arithmetic", "severity": 2}
+{"id": "a141", "question": "Solve for x: x / 5 = 6", "student_level": "Algebra I", "model_answer": "Subtracting constants shows x is close to 30", "label_hallucinated": 1, "error_type": "reasoning_gap", "severity": 3}
+{"id": "a142", "question": "Solve for x: x / 5 = 6", "student_level": "Algebra I", "model_answer": "Solving gives x = 30", "label_hallucinated": 0, "error_type": "none", "severity": 0}
+{"id": "a143", "question": "Solve for x: x / 5 = 6", "student_level": "Algebra I", "model_answer": "Solving gives x = 32", "label_hallucinated": 1, "error_type": "arithmetic", "severity": 2}
+{"id": "a144", "question": "Solve for x: x / 5 = 6", "student_level": "Algebra I", "model_answer": "Subtracting constants shows x is close to 30", "label_hallucinated": 1, "error_type": "reasoning_gap", "severity": 3}
+{"id": "a145", "question": "Solve for x: x / 5 = 6", "student_level": "Algebra I", "model_answer": "Solving gives x = 30", "label_hallucinated": 0, "error_type": "none", "severity": 0}
+{"id": "a146", "question": "Solve for x: x / 5 = 6", "student_level": "Algebra I", "model_answer": "Solving gives x = 32", "label_hallucinated": 1, "error_type": "arithmetic", "severity": 2}
+{"id": "a147", "question": "Solve for x: x / 5 = 6", "student_level": "Algebra I", "model_answer": "Subtracting constants shows x is close to 30", "label_hallucinated": 1, "error_type": "reasoning_gap", "severity": 3}
+{"id": "a148", "question": "Solve for x: x / 5 = 6", "student_level": "Algebra I", "model_answer": "Solving gives x = 30", "label_hallucinated": 0, "error_type": "none", "severity": 0}
+{"id": "a149", "question": "Solve for x: x / 5 = 6", "student_level": "Algebra I", "model_answer": "Solving gives x = 32", "label_hallucinated": 1, "error_type": "arithmetic", "severity": 2}
+{"id": "a150", "question": "Solve for x: x / 5 = 6", "student_level": "Algebra I", "model_answer": "Subtracting constants shows x is close to 30", "label_hallucinated": 1, "error_type": "reasoning_gap", "severity": 3}
+{"id": "a151", "question": "Solve for x: x / 5 = 6", "student_level": "Algebra I", "model_answer": "Solving gives x = 30", "label_hallucinated": 0, "error_type": "none", "severity": 0}
+{"id": "a152", "question": "Solve for x: x / 5 = 6", "student_level": "Algebra I", "model_answer": "Solving gives x = 32", "label_hallucinated": 1, "error_type": "arithmetic", "severity": 2}
+{"id": "a153", "question": "Solve for x: x / 5 = 6", "student_level": "Algebra I", "model_answer": "Subtracting constants shows x is close to 30", "label_hallucinated": 1, "error_type": "reasoning_gap", "severity": 3}
+{"id": "a154", "question": "Solve for x: 4x + 1 = 17", "student_level": "Algebra I", "model_answer": "Solving gives x = 4", "label_hallucinated": 0, "error_type": "none", "severity": 0}
+{"id": "a155", "question": "Solve for x: 4x + 1 = 17", "student_level": "Algebra I", "model_answer": "Solving gives x = 6", "label_hallucinated": 1, "error_type": "arithmetic", "severity": 2}
+{"id": "a156", "question": "Solve for x: 4x + 1 = 17", "student_level": "Algebra I", "model_answer": "Subtracting constants shows x is close to 4", "label_hallucinated": 1, "error_type": "reasoning_gap", "severity": 3}
+{"id": "a157", "question": "Solve for x: 4x + 1 = 17", "student_level": "Algebra I", "model_answer": "Solving gives x = 4", "label_hallucinated": 0, "error_type": "none", "severity": 0}
+{"id": "a158", "question": "Solve for x: 4x + 1 = 17", "student_level": "Algebra I", "model_answer": "Solving gives x = 6", "label_hallucinated": 1, "error_type": "arithmetic", "severity": 2}
+{"id": "a159", "question": "Solve for x: 4x + 1 = 17", "student_level": "Algebra I", "model_answer": "Subtracting constants shows x is close to 4", "label_hallucinated": 1, "error_type": "reasoning_gap", "severity": 3}
+{"id": "a160", "question": "Solve for x: 4x + 1 = 17", "student_level": "Algebra I", "model_answer": "Solving gives x = 4", "label_hallucinated": 0, "error_type": "none", "severity": 0}
+{"id": "a161", "question": "Solve for x: 4x + 1 = 17", "student_level": "Algebra I", "model_answer": "Solving gives x = 6", "label_hallucinated": 1, "error_type": "arithmetic", "severity": 2}
+{"id": "a162", "question": "Solve for x: 4x + 1 = 17", "student_level": "Algebra I", "model_answer": "Subtracting constants shows x is close to 4", "label_hallucinated": 1, "error_type": "reasoning_gap", "severity": 3}
+{"id": "a163", "question": "Solve for x: 4x + 1 = 17", "student_level": "Algebra I", "model_answer": "Solving gives x = 4", "label_hallucinated": 0, "error_type": "none", "severity": 0}
+{"id": "a164", "question": "Solve for x: 4x + 1 = 17", "student_level": "Algebra I", "model_answer": "Solving gives x = 6", "label_hallucinated": 1, "error_type": "arithmetic", "severity": 2}
+{"id": "a165", "question": "Solve for x: 4x + 1 = 17", "student_level": "Algebra I", "model_answer": "Subtracting constants shows x is close to 4", "label_hallucinated": 1, "error_type": "reasoning_gap", "severity": 3}
+{"id": "a166", "question": "Solve for x: 4x + 1 = 17", "student_level": "Algebra I", "model_answer": "Solving gives x = 4", "label_hallucinated": 0, "error_type": "none", "severity": 0}
+{"id": "a167", "question": "Solve for x: 4x + 1 = 17", "student_level": "Algebra I", "model_answer": "Solving gives x = 6", "label_hallucinated": 1, "error_type": "arithmetic", "severity": 2}
+{"id": "a168", "question": "Solve for x: 4x + 1 = 17", "student_level": "Algebra I", "model_answer": "Subtracting constants shows x is close to 4", "label_hallucinated": 1, "error_type": "reasoning_gap", "severity": 3}
+{"id": "a169", "question": "Solve for x: 4x + 1 = 17", "student_level": "Algebra I", "model_answer": "Solving gives x = 4", "label_hallucinated": 0, "error_type": "none", "severity": 0}
+{"id": "a170", "question": "Solve for x: 4x + 1 = 17", "student_level": "Algebra I", "model_answer": "Solving gives x = 6", "label_hallucinated": 1, "error_type": "arithmetic", "severity": 2}
+{"id": "a171", "question": "Solve for x: 4x + 1 = 17", "student_level": "Algebra I", "model_answer": "Subtracting constants shows x is close to 4", "label_hallucinated": 1, "error_type": "reasoning_gap", "severity": 3}
+{"id": "a172", "question": "Solve for x: 4x + 1 = 17", "student_level": "Algebra I", "model_answer": "Solving gives x = 4", "label_hallucinated": 0, "error_type": "none", "severity": 0}
+{"id": "a173", "question": "Solve for x: 4x + 1 = 17", "student_level": "Algebra I", "model_answer": "Solving gives x = 6", "label_hallucinated": 1, "error_type": "arithmetic", "severity": 2}
+{"id": "a174", "question": "Solve for x: 4x + 1 = 17", "student_level": "Algebra I", "model_answer": "Subtracting constants shows x is close to 4", "label_hallucinated": 1, "error_type": "reasoning_gap", "severity": 3}
+{"id": "a175", "question": "Solve for x: 4x + 1 = 17", "student_level": "Algebra I", "model_answer": "Solving gives x = 4", "label_hallucinated": 0, "error_type": "none", "severity": 0}
+{"id": "a176", "question": "Solve for x: 4x + 1 = 17", "student_level": "Algebra I", "model_answer": "Solving gives x = 6", "label_hallucinated": 1, "error_type": "arithmetic", "severity": 2}
+{"id": "a177", "question": "Solve for x: 4x + 1 = 17", "student_level": "Algebra I", "model_answer": "Subtracting constants shows x is close to 4", "label_hallucinated": 1, "error_type": "reasoning_gap", "severity": 3}
+{"id": "a178", "question": "Solve for x: 4x + 1 = 17", "student_level": "Algebra I", "model_answer": "Solving gives x = 4", "label_hallucinated": 0, "error_type": "none", "severity": 0}
+{"id": "a179", "question": "Solve for x: 4x + 1 = 17", "student_level": "Algebra I", "model_answer": "Solving gives x = 6", "label_hallucinated": 1, "error_type": "arithmetic", "severity": 2}
+{"id": "a180", "question": "Solve for x: 4x + 1 = 17", "student_level": "Algebra I", "model_answer": "Subtracting constants shows x is close to 4", "label_hallucinated": 1, "error_type": "reasoning_gap", "severity": 3}
+{"id": "a181", "question": "Solve for x: 4x + 1 = 17", "student_level": "Algebra I", "model_answer": "Solving gives x = 4", "label_hallucinated": 0, "error_type": "none", "severity": 0}
+{"id": "a182", "question": "Solve for x: 4x + 1 = 17", "student_level": "Algebra I", "model_answer": "Solving gives x = 6", "label_hallucinated": 1, "error_type": "arithmetic", "severity": 2}
+{"id": "a183", "question": "Solve for x: 4x + 1 = 17", "student_level": "Algebra I", "model_answer": "Subtracting constants shows x is close to 4", "label_hallucinated": 1, "error_type": "reasoning_gap", "severity": 3}
+{"id": "a184", "question": "Solve for x: 2(x + 3) = 14", "student_level": "Algebra I", "model_answer": "Solving gives x = 4", "label_hallucinated": 0, "error_type": "none", "severity": 0}
+{"id": "a185", "question": "Solve for x: 2(x + 3) = 14", "student_level": "Algebra I", "model_answer": "Solving gives x = 6", "label_hallucinated": 1, "error_type": "arithmetic", "severity": 2}
+{"id": "a186", "question": "Solve for x: 2(x + 3) = 14", "student_level": "Algebra I", "model_answer": "Subtracting constants shows x is close to 4", "label_hallucinated": 1, "error_type": "reasoning_gap", "severity": 3}
+{"id": "a187", "question": "Solve for x: 2(x + 3) = 14", "student_level": "Algebra I", "model_answer": "Solving gives x = 4", "label_hallucinated": 0, "error_type": "none", "severity": 0}
+{"id": "a188", "question": "Solve for x: 2(x + 3) = 14", "student_level": "Algebra I", "model_answer": "Solving gives x = 6", "label_hallucinated": 1, "error_type": "arithmetic", "severity": 2}
+{"id": "a189", "question": "Solve for x: 2(x + 3) = 14", "student_level": "Algebra I", "model_answer": "Subtracting constants shows x is close to 4", "label_hallucinated": 1, "error_type": "reasoning_gap", "severity": 3}
+{"id": "a190", "question": "Solve for x: 2(x + 3) = 14", "student_level": "Algebra I", "model_answer": "Solving gives x = 4", "label_hallucinated": 0, "error_type": "none", "severity": 0}
+{"id": "a191", "question": "Solve for x: 2(x + 3) = 14", "student_level": "Algebra I", "model_answer": "Solving gives x = 6", "label_hallucinated": 1, "error_type": "arithmetic", "severity": 2}
+{"id": "a192", "question": "Solve for x: 2(x + 3) = 14", "student_level": "Algebra I", "model_answer": "Subtracting constants shows x is close to 4", "label_hallucinated": 1, "error_type": "reasoning_gap", "severity": 3}
+{"id": "a193", "question": "Solve for x: 2(x + 3) = 14", "student_level": "Algebra I", "model_answer": "Solving gives x = 4", "label_hallucinated": 0, "error_type": "none", "severity": 0}
+{"id": "a194", "question": "Solve for x: 2(x + 3) = 14", "student_level": "Algebra I", "model_answer": "Solving gives x = 6", "label_hallucinated": 1, "error_type": "arithmetic", "severity": 2}
+{"id": "a195", "question": "Solve for x: 2(x + 3) = 14", "student_level": "Algebra I", "model_answer": "Subtracting constants shows x is close to 4", "label_hallucinated": 1, "error_type": "reasoning_gap", "severity": 3}
+{"id": "a196", "question": "Solve for x: 2(x + 3) = 14", "student_level": "Algebra I", "model_answer": "Solving gives x = 4", "label_hallucinated": 0, "error_type": "none", "severity": 0}
+{"id": "a197", "question": "Solve for x: 2(x + 3) = 14", "student_level": "Algebra I", "model_answer": "Solving gives x = 6", "label_hallucinated": 1, "error_type": "arithmetic", "severity": 2}
+{"id": "a198", "question": "Solve for x: 2(x + 3) = 14", "student_level": "Algebra I", "model_answer": "Subtracting constants shows x is close to 4", "label_hallucinated": 1, "error_type": "reasoning_gap", "severity": 3}
+{"id": "a199", "question": "Solve for x: 2(x + 3) = 14", "student_level": "Algebra I", "model_answer": "Solving gives x = 4", "label_hallucinated": 0, "error_type": "none", "severity": 0}
+{"id": "a200", "question": "Solve for x: 2(x + 3) = 14", "student_level": "Algebra I", "model_answer": "Solving gives x = 6", "label_hallucinated": 1, "error_type": "arithmetic", "severity": 2}
+{"id": "a201", "question": "Solve for x: 2(x + 3) = 14", "student_level": "Algebra I", "model_answer": "Subtracting constants shows x is close to 4", "label_hallucinated": 1, "error_type": "reasoning_gap", "severity": 3}
+{"id": "a202", "question": "Solve for x: 2(x + 3) = 14", "student_level": "Algebra I", "model_answer": "Solving gives x = 4", "label_hallucinated": 0, "error_type": "none", "severity": 0}
+{"id": "a203", "question": "Solve for x: 2(x + 3) = 14", "student_level": "Algebra I", "model_answer": "Solving gives x = 6", "label_hallucinated": 1, "error_type": "arithmetic", "severity": 2}
+{"id": "a204", "question": "Solve for x: 2(x + 3) = 14", "student_level": "Algebra I", "model_answer": "Subtracting constants shows x is close to 4", "label_hallucinated": 1, "error_type": "reasoning_gap", "severity": 3}
+{"id": "a205", "question": "Solve for x: 2(x + 3) = 14", "student_level": "Algebra I", "model_answer": "Solving gives x = 4", "label_hallucinated": 0, "error_type": "none", "severity": 0}
+{"id": "a206", "question": "Solve for x: 2(x + 3) = 14", "student_level": "Algebra I", "model_answer": "Solving gives x = 6", "label_hallucinated": 1, "error_type": "arithmetic", "severity": 2}
+{"id": "a207", "question": "Solve for x: 2(x + 3) = 14", "student_level": "Algebra I", "model_answer": "Subtracting constants shows x is close to 4", "label_hallucinated": 1, "error_type": "reasoning_gap", "severity": 3}
+{"id": "a208", "question": "Solve for x: 2(x + 3) = 14", "student_level": "Algebra I", "model_answer": "Solving gives x = 4", "label_hallucinated": 0, "error_type": "none", "severity": 0}
+{"id": "a209", "question": "Solve for x: 2(x + 3) = 14", "student_level": "Algebra I", "model_answer": "Solving gives x = 6", "label_hallucinated": 1, "error_type": "arithmetic", "severity": 2}
+{"id": "a210", "question": "Solve for x: 2(x + 3) = 14", "student_level": "Algebra I", "model_answer": "Subtracting constants shows x is close to 4", "label_hallucinated": 1, "error_type": "reasoning_gap", "severity": 3}
+{"id": "a211", "question": "Solve for x: 2(x + 3) = 14", "student_level": "Algebra I", "model_answer": "Solving gives x = 4", "label_hallucinated": 0, "error_type": "none", "severity": 0}
+{"id": "a212", "question": "Solve for x: 2(x + 3) = 14", "student_level": "Algebra I", "model_answer": "Solving gives x = 6", "label_hallucinated": 1, "error_type": "arithmetic", "severity": 2}
+{"id": "a213", "question": "Solve for x: 2(x + 3) = 14", "student_level": "Algebra I", "model_answer": "Subtracting constants shows x is close to 4", "label_hallucinated": 1, "error_type": "reasoning_gap", "severity": 3}
+{"id": "a214", "question": "Solve for x: 5x - 10 = 15", "student_level": "Algebra I", "model_answer": "Solving gives x = 5", "label_hallucinated": 0, "error_type": "none", "severity": 0}
+{"id": "a215", "question": "Solve for x: 5x - 10 = 15", "student_level": "Algebra I", "model_answer": "Solving gives x = 7", "label_hallucinated": 1, "error_type": "arithmetic", "severity": 2}
+{"id": "a216", "question": "Solve for x: 5x - 10 = 15", "student_level": "Algebra I", "model_answer": "Subtracting constants shows x is close to 5", "label_hallucinated": 1, "error_type": "reasoning_gap", "severity": 3}
+{"id": "a217", "question": "Solve for x: 5x - 10 = 15", "student_level": "Algebra I", "model_answer": "Solving gives x = 5", "label_hallucinated": 0, "error_type": "none", "severity": 0}
+{"id": "a218", "question": "Solve for x: 5x - 10 = 15", "student_level": "Algebra I", "model_answer": "Solving gives x = 7", "label_hallucinated": 1, "error_type": "arithmetic", "severity": 2}
+{"id": "a219", "question": "Solve for x: 5x - 10 = 15", "student_level": "Algebra I", "model_answer": "Subtracting constants shows x is close to 5", "label_hallucinated": 1, "error_type": "reasoning_gap", "severity": 3}
+{"id": "a220", "question": "Solve for x: 5x - 10 = 15", "student_level": "Algebra I", "model_answer": "Solving gives x = 5", "label_hallucinated": 0, "error_type": "none", "severity": 0}
+{"id": "a221", "question": "Solve for x: 5x - 10 = 15", "student_level": "Algebra I", "model_answer": "Solving gives x = 7", "label_hallucinated": 1, "error_type": "arithmetic", "severity": 2}
+{"id": "a222", "question": "Solve for x: 5x - 10 = 15", "student_level": "Algebra I", "model_answer": "Subtracting constants shows x is close to 5", "label_hallucinated": 1, "error_type": "reasoning_gap", "severity": 3}
+{"id": "a223", "question": "Solve for x: 5x - 10 = 15", "student_level": "Algebra I", "model_answer": "Solving gives x = 5", "label_hallucinated": 0, "error_type": "none", "severity": 0}
+{"id": "a224", "question": "Solve for x: 5x - 10 = 15", "student_level": "Algebra I", "model_answer": "Solving gives x = 7", "label_hallucinated": 1, "error_type": "arithmetic", "severity": 2}
+{"id": "a225", "question": "Solve for x: 5x - 10 = 15", "student_level": "Algebra I", "model_answer": "Subtracting constants shows x is close to 5", "label_hallucinated": 1, "error_type": "reasoning_gap", "severity": 3}
+{"id": "a226", "question": "Solve for x: 5x - 10 = 15", "student_level": "Algebra I", "model_answer": "Solving gives x = 5", "label_hallucinated": 0, "error_type": "none", "severity": 0}
+{"id": "a227", "question": "Solve for x: 5x - 10 = 15", "student_level": "Algebra I", "model_answer": "Solving gives x = 7", "label_hallucinated": 1, "error_type": "arithmetic", "severity": 2}
+{"id": "a228", "question": "Solve for x: 5x - 10 = 15", "student_level": "Algebra I", "model_answer": "Subtracting constants shows x is close to 5", "label_hallucinated": 1, "error_type": "reasoning_gap", "severity": 3}
+{"id": "a229", "question": "Solve for x: 5x - 10 = 15", "student_level": "Algebra I", "model_answer": "Solving gives x = 5", "label_hallucinated": 0, "error_type": "none", "severity": 0}
+{"id": "a230", "question": "Solve for x: 5x - 10 = 15", "student_level": "Algebra I", "model_answer": "Solving gives x = 7", "label_hallucinated": 1, "error_type": "arithmetic", "severity": 2}
+{"id": "a231", "question": "Solve for x: 5x - 10 = 15", "student_level": "Algebra I", "model_answer": "Subtracting constants shows x is close to 5", "label_hallucinated": 1, "error_type": "reasoning_gap", "severity": 3}
+{"id": "a232", "question": "Solve for x: 5x - 10 = 15", "student_level": "Algebra I", "model_answer": "Solving gives x = 5", "label_hallucinated": 0, "error_type": "none", "severity": 0}
+{"id": "a233", "question": "Solve for x: 5x - 10 = 15", "student_level": "Algebra I", "model_answer": "Solving gives x = 7", "label_hallucinated": 1, "error_type": "arithmetic", "severity": 2}
+{"id": "a234", "question": "Solve for x: 5x - 10 = 15", "student_level": "Algebra I", "model_answer": "Subtracting constants shows x is close to 5", "label_hallucinated": 1, "error_type": "reasoning_gap", "severity": 3}
+{"id": "a235", "question": "Solve for x: 5x - 10 = 15", "student_level": "Algebra I", "model_answer": "Solving gives x = 5", "label_hallucinated": 0, "error_type": "none", "severity": 0}
+{"id": "a236", "question": "Solve for x: 5x - 10 = 15", "student_level": "Algebra I", "model_answer": "Solving gives x = 7", "label_hallucinated": 1, "error_type": "arithmetic", "severity": 2}
+{"id": "a237", "question": "Solve for x: 5x - 10 = 15", "student_level": "Algebra I", "model_answer": "Subtracting constants shows x is close to 5", "label_hallucinated": 1, "error_type": "reasoning_gap", "severity": 3}
+{"id": "a238", "question": "Solve for x: 5x - 10 = 15", "student_level": "Algebra I", "model_answer": "Solving gives x = 5", "label_hallucinated": 0, "error_type": "none", "severity": 0}
+{"id": "a239", "question": "Solve for x: 5x - 10 = 15", "student_level": "Algebra I", "model_answer": "Solving gives x = 7", "label_hallucinated": 1, "error_type": "arithmetic", "severity": 2}
+{"id": "a240", "question": "Solve for x: 5x - 10 = 15", "student_level": "Algebra I", "model_answer": "Subtracting constants shows x is close to 5", "label_hallucinated": 1, "error_type": "reasoning_gap", "severity": 3}
+{"id": "a241", "question": "Solve for x: 5x - 10 = 15", "student_level": "Algebra I", "model_answer": "Solving gives x = 5", "label_hallucinated": 0, "error_type": "none", "severity": 0}
+{"id": "a242", "question": "Solve for x: 5x - 10 = 15", "student_level": "Algebra I", "model_answer": "Solving gives x = 7", "label_hallucinated": 1, "error_type": "arithmetic", "severity": 2}
+{"id": "a243", "question": "Solve for x: 5x - 10 = 15", "student_level": "Algebra I", "model_answer": "Subtracting constants shows x is close to 5", "label_hallucinated": 1, "error_type": "reasoning_gap", "severity": 3}
+{"id": "a244", "question": "Solve for x: x + 9 = 2", "student_level": "Algebra I", "model_answer": "Solving gives x = -7", "label_hallucinated": 0, "error_type": "none", "severity": 0}
+{"id": "a245", "question": "Solve for x: x + 9 = 2", "student_level": "Algebra I", "model_answer": "Solving gives x = -5", "label_hallucinated": 1, "error_type": "arithmetic", "severity": 2}
+{"id": "a246", "question": "Solve for x: x + 9 = 2", "student_level": "Algebra I", "model_answer": "Subtracting constants shows x is close to -7", "label_hallucinated": 1, "error_type": "reasoning_gap", "severity": 3}
+{"id": "a247", "question": "Solve for x: x + 9 = 2", "student_level": "Algebra I", "model_answer": "Solving gives x = -7", "label_hallucinated": 0, "error_type": "none", "severity": 0}
+{"id": "a248", "question": "Solve for x: x + 9 = 2", "student_level": "Algebra I", "model_answer": "Solving gives x = -5", "label_hallucinated": 1, "error_type": "arithmetic", "severity": 2}
+{"id": "a249", "question": "Solve for x: x + 9 = 2", "student_level": "Algebra I", "model_answer": "Subtracting constants shows x is close to -7", "label_hallucinated": 1, "error_type": "reasoning_gap", "severity": 3}
+{"id": "a250", "question": "Solve for x: x + 9 = 2", "student_level": "Algebra I", "model_answer": "Solving gives x = -7", "label_hallucinated": 0, "error_type": "none", "severity": 0}
+{"id": "a251", "question": "Solve for x: x + 9 = 2", "student_level": "Algebra I", "model_answer": "Solving gives x = -5", "label_hallucinated": 1, "error_type": "arithmetic", "severity": 2}
+{"id": "a252", "question": "Solve for x: x + 9 = 2", "student_level": "Algebra I", "model_answer": "Subtracting constants shows x is close to -7", "label_hallucinated": 1, "error_type": "reasoning_gap", "severity": 3}
+{"id": "a253", "question": "Solve for x: x + 9 = 2", "student_level": "Algebra I", "model_answer": "Solving gives x = -7", "label_hallucinated": 0, "error_type": "none", "severity": 0}
+{"id": "a254", "question": "Solve for x: x + 9 = 2", "student_level": "Algebra I", "model_answer": "Solving gives x = -5", "label_hallucinated": 1, "error_type": "arithmetic", "severity": 2}
+{"id": "a255", "question": "Solve for x: x + 9 = 2", "student_level": "Algebra I", "model_answer": "Subtracting constants shows x is close to -7", "label_hallucinated": 1, "error_type": "reasoning_gap", "severity": 3}
+{"id": "a256", "question": "Solve for x: x + 9 = 2", "student_level": "Algebra I", "model_answer": "Solving gives x = -7", "label_hallucinated": 0, "error_type": "none", "severity": 0}
+{"id": "a257", "question": "Solve for x: x + 9 = 2", "student_level": "Algebra I", "model_answer": "Solving gives x = -5", "label_hallucinated": 1, "error_type": "arithmetic", "severity": 2}
+{"id": "a258", "question": "Solve for x: x + 9 = 2", "student_level": "Algebra I", "model_answer": "Subtracting constants shows x is close to -7", "label_hallucinated": 1, "error_type": "reasoning_gap", "severity": 3}
+{"id": "a259", "question": "Solve for x: x + 9 = 2", "student_level": "Algebra I", "model_answer": "Solving gives x = -7", "label_hallucinated": 0, "error_type": "none", "severity": 0}
+{"id": "a260", "question": "Solve for x: x + 9 = 2", "student_level": "Algebra I", "model_answer": "Solving gives x = -5", "label_hallucinated": 1, "error_type": "arithmetic", "severity": 2}
+{"id": "a261", "question": "Solve for x: x + 9 = 2", "student_level": "Algebra I", "model_answer": "Subtracting constants shows x is close to -7", "label_hallucinated": 1, "error_type": "reasoning_gap", "severity": 3}
+{"id": "a262", "question": "Solve for x: x + 9 = 2", "student_level": "Algebra I", "model_answer": "Solving gives x = -7", "label_hallucinated": 0, "error_type": "none", "severity": 0}
+{"id": "a263", "question": "Solve for x: x + 9 = 2", "student_level": "Algebra I", "model_answer": "Solving gives x = -5", "label_hallucinated": 1, "error_type": "arithmetic", "severity": 2}
+{"id": "a264", "question": "Solve for x: x + 9 = 2", "student_level": "Algebra I", "model_answer": "Subtracting constants shows x is close to -7", "label_hallucinated": 1, "error_type": "reasoning_gap", "severity": 3}
+{"id": "a265", "question": "Solve for x: x + 9 = 2", "student_level": "Algebra I", "model_answer": "Solving gives x = -7", "label_hallucinated": 0, "error_type": "none", "severity": 0}
+{"id": "a266", "question": "Solve for x: x + 9 = 2", "student_level": "Algebra I", "model_answer": "Solving gives x = -5", "label_hallucinated": 1, "error_type": "arithmetic", "severity": 2}
+{"id": "a267", "question": "Solve for x: x + 9 = 2", "student_level": "Algebra I", "model_answer": "Subtracting constants shows x is close to -7", "label_hallucinated": 1, "error_type": "reasoning_gap", "severity": 3}
+{"id": "a268", "question": "Solve for x: x + 9 = 2", "student_level": "Algebra I", "model_answer": "Solving gives x = -7", "label_hallucinated": 0, "error_type": "none", "severity": 0}
+{"id": "a269", "question": "Solve for x: x + 9 = 2", "student_level": "Algebra I", "model_answer": "Solving gives x = -5", "label_hallucinated": 1, "error_type": "arithmetic", "severity": 2}
+{"id": "a270", "question": "Solve for x: x + 9 = 2", "student_level": "Algebra I", "model_answer": "Subtracting constants shows x is close to -7", "label_hallucinated": 1, "error_type": "reasoning_gap", "severity": 3}
+{"id": "a271", "question": "Solve for x: x + 9 = 2", "student_level": "Algebra I", "model_answer": "Solving gives x = -7", "label_hallucinated": 0, "error_type": "none", "severity": 0}
+{"id": "a272", "question": "Solve for x: x + 9 = 2", "student_level": "Algebra I", "model_answer": "Solving gives x = -5", "label_hallucinated": 1, "error_type": "arithmetic", "severity": 2}
+{"id": "a273", "question": "Solve for x: x + 9 = 2", "student_level": "Algebra I", "model_answer": "Subtracting constants shows x is close to -7", "label_hallucinated": 1, "error_type": "reasoning_gap", "severity": 3}
+{"id": "a274", "question": "Solve for x: 6x = 36", "student_level": "Algebra I", "model_answer": "Solving gives x = 6", "label_hallucinated": 0, "error_type": "none", "severity": 0}
+{"id": "a275", "question": "Solve for x: 6x = 36", "student_level": "Algebra I", "model_answer": "Solving gives x = 8", "label_hallucinated": 1, "error_type": "arithmetic", "severity": 2}
+{"id": "a276", "question": "Solve for x: 6x = 36", "student_level": "Algebra I", "model_answer": "Subtracting constants shows x is close to 6", "label_hallucinated": 1, "error_type": "reasoning_gap", "severity": 3}
+{"id": "a277", "question": "Solve for x: 6x = 36", "student_level": "Algebra I", "model_answer": "Solving gives x = 6", "label_hallucinated": 0, "error_type": "none", "severity": 0}
+{"id": "a278", "question": "Solve for x: 6x = 36", "student_level": "Algebra I", "model_answer": "Solving gives x = 8", "label_hallucinated": 1, "error_type": "arithmetic", "severity": 2}
+{"id": "a279", "question": "Solve for x: 6x = 36", "student_level": "Algebra I", "model_answer": "Subtracting constants shows x is close to 6", "label_hallucinated": 1, "error_type": "reasoning_gap", "severity": 3}
+{"id": "a280", "question": "Solve for x: 6x = 36", "student_level": "Algebra I", "model_answer": "Solving gives x = 6", "label_hallucinated": 0, "error_type": "none", "severity": 0}
+{"id": "a281", "question": "Solve for x: 6x = 36", "student_level": "Algebra I", "model_answer": "Solving gives x = 8", "label_hallucinated": 1, "error_type": "arithmetic", "severity": 2}
+{"id": "a282", "question": "Solve for x: 6x = 36", "student_level": "Algebra I", "model_answer": "Subtracting constants shows x is close to 6", "label_hallucinated": 1, "error_type": "reasoning_gap", "severity": 3}
+{"id": "a283", "question": "Solve for x: 6x = 36", "student_level": "Algebra I", "model_answer": "Solving gives x = 6", "label_hallucinated": 0, "error_type": "none", "severity": 0}
+{"id": "a284", "question": "Solve for x: 6x = 36", "student_level": "Algebra I", "model_answer": "Solving gives x = 8", "label_hallucinated": 1, "error_type": "arithmetic", "severity": 2}
+{"id": "a285", "question": "Solve for x: 6x = 36", "student_level": "Algebra I", "model_answer": "Subtracting constants shows x is close to 6", "label_hallucinated": 1, "error_type": "reasoning_gap", "severity": 3}
+{"id": "a286", "question": "Solve for x: 6x = 36", "student_level": "Algebra I", "model_answer": "Solving gives x = 6", "label_hallucinated": 0, "error_type": "none", "severity": 0}
+{"id": "a287", "question": "Solve for x: 6x = 36", "student_level": "Algebra I", "model_answer": "Solving gives x = 8", "label_hallucinated": 1, "error_type": "arithmetic", "severity": 2}
+{"id": "a288", "question": "Solve for x: 6x = 36", "student_level": "Algebra I", "model_answer": "Subtracting constants shows x is close to 6", "label_hallucinated": 1, "error_type": "reasoning_gap", "severity": 3}
+{"id": "a289", "question": "Solve for x: 6x = 36", "student_level": "Algebra I", "model_answer": "Solving gives x = 6", "label_hallucinated": 0, "error_type": "none", "severity": 0}
+{"id": "a290", "question": "Solve for x: 6x = 36", "student_level": "Algebra I", "model_answer": "Solving gives x = 8", "label_hallucinated": 1, "error_type": "arithmetic", "severity": 2}
+{"id": "a291", "question": "Solve for x: 6x = 36", "student_level": "Algebra I", "model_answer": "Subtracting constants shows x is close to 6", "label_hallucinated": 1, "error_type": "reasoning_gap", "severity": 3}
+{"id": "a292", "question": "Solve for x: 6x = 36", "student_level": "Algebra I", "model_answer": "Solving gives x = 6", "label_hallucinated": 0, "error_type": "none", "severity": 0}
+{"id": "a293", "question": "Solve for x: 6x = 36", "student_level": "Algebra I", "model_answer": "Solving gives x = 8", "label_hallucinated": 1, "error_type": "arithmetic", "severity": 2}
+{"id": "a294", "question": "Solve for x: 6x = 36", "student_level": "Algebra I", "model_answer": "Subtracting constants shows x is close to 6", "label_hallucinated": 1, "error_type": "reasoning_gap", "severity": 3}
+{"id": "a295", "question": "Solve for x: 6x = 36", "student_level": "Algebra I", "model_answer": "Solving gives x = 6", "label_hallucinated": 0, "error_type": "none", "severity": 0}
+{"id": "a296", "question": "Solve for x: 6x = 36", "student_level": "Algebra I", "model_answer": "Solving gives x = 8", "label_hallucinated": 1, "error_type": "arithmetic", "severity": 2}
+{"id": "a297", "question": "Solve for x: 6x = 36", "student_level": "Algebra I", "model_answer": "Subtracting constants shows x is close to 6", "label_hallucinated": 1, "error_type": "reasoning_gap", "severity": 3}
+{"id": "a298", "question": "Solve for x: 6x = 36", "student_level": "Algebra I", "model_answer": "Solving gives x = 6", "label_hallucinated": 0, "error_type": "none", "severity": 0}
+{"id": "a299", "question": "Solve for x: 6x = 36", "student_level": "Algebra I", "model_answer": "Solving gives x = 8", "label_hallucinated": 1, "error_type": "arithmetic", "severity": 2}
+{"id": "a300", "question": "Solve for x: 6x = 36", "student_level": "Algebra I", "model_answer": "Subtracting constants shows x is close to 6", "label_hallucinated": 1, "error_type": "reasoning_gap", "severity": 3}
+{"id": "a301", "question": "Solve for x: 6x = 36", "student_level": "Algebra I", "model_answer": "Solving gives x = 6", "label_hallucinated": 0, "error_type": "none", "severity": 0}
+{"id": "a302", "question": "Solve for x: 6x = 36", "student_level": "Algebra I", "model_answer": "Solving gives x = 8", "label_hallucinated": 1, "error_type": "arithmetic", "severity": 2}
+{"id": "a303", "question": "Solve for x: 6x = 36", "student_level": "Algebra I", "model_answer": "Subtracting constants shows x is close to 6", "label_hallucinated": 1, "error_type": "reasoning_gap", "severity": 3}
