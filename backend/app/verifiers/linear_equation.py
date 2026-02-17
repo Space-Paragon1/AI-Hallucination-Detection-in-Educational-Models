@@ -1,7 +1,33 @@
 import re
 from typing import Tuple
 
+_SAFE = re.compile(r"^[0-9x\+\-\*\/\.\(\)]+$")
 _EQ_RE = re.compile(r"(.+?)=(.+)")
+
+
+def _apply_implicit_multiply(s: str) -> str:
+    s = re.sub(r"(\d)(x)", r"\1*\2", s)
+    s = re.sub(r"(x)(\d)", r"\1*\2", s)
+    s = re.sub(r"(\d)(\()", r"\1*\2", s)
+    s = re.sub(r"(x)(\()", r"\1*\2", s)
+    s = re.sub(r"(\))(\()", r"\1*\2", s)
+    s = re.sub(r"(\))(x)", r"\1*\2", s)
+    return s
+
+
+def _extract_equation(text: str) -> str | None:
+    """Extract the math equation from question text, stripping prose prefixes."""
+    # If there's a colon, take everything after the last colon
+    if ":" in text:
+        text = text.rsplit(":", 1)[1]
+    # Strip common prefixes
+    text = re.sub(r"(?i)^(solve|find|simplify|evaluate|compute)\b\s*", "", text.strip())
+    text = re.sub(r"(?i)^for\s+[a-z]\s*:\s*", "", text.strip())
+    text = text.strip()
+    if "=" in text:
+        return text
+    return None
+
 
 def simple_linear_equation_plug_in(question: str, x_value: float) -> Tuple[bool, str]:
     """
@@ -10,24 +36,22 @@ def simple_linear_equation_plug_in(question: str, x_value: float) -> Tuple[bool,
     - Supports basic arithmetic with variable x: + - * / () and numbers
     - Plugs x_value and checks equality
     """
-    eq = question.replace(" ", "")
+    eq_text = _extract_equation(question)
+    if not eq_text:
+        return False, "no_equation_found"
 
-# Convert implicit multiplication like 3(x-2) -> 3*(x-2)
-    eq = re.sub(r"(\d)(\()", r"\1*\2", eq)
-# Convert x(x+1) -> x*(x+1)
-    eq = re.sub(r"(x)(\()", r"\1*\2", eq)
-# Convert )( -> )*(
-    eq = re.sub(r"(\))(\()", r"\1*\2", eq)
+    eq = eq_text.replace(" ", "")
+    eq = _apply_implicit_multiply(eq)
+
     m = _EQ_RE.search(eq)
     if not m:
         return False, "no_equation_found"
 
     left, right = m.group(1), m.group(2)
 
-    # allow only safe characters
-    if not re.fullmatch(r"[0-9x\+\-\*\/\.\(\)]+", left):
+    if not _SAFE.fullmatch(left):
         return False, "left_not_supported"
-    if not re.fullmatch(r"[0-9x\+\-\*\/\.\(\)]+", right):
+    if not _SAFE.fullmatch(right):
         return False, "right_not_supported"
 
     def safe_eval(expr: str, x: float) -> float:
