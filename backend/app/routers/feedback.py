@@ -1,7 +1,7 @@
 from fastapi import APIRouter
 from pathlib import Path
 import json
-from datetime import datetime
+from datetime import datetime, timezone
 from backend.app.core.schemas import FeedbackRequest
 
 router = APIRouter()
@@ -12,7 +12,7 @@ FEEDBACK_PATH.parent.mkdir(parents=True, exist_ok=True)
 @router.post("/feedback")
 def feedback(req: FeedbackRequest):
     record = req.model_dump()
-    record["ts"] = datetime.utcnow().isoformat()
+    record["ts"] = datetime.now(timezone.utc).isoformat()
 
     with FEEDBACK_PATH.open("a", encoding="utf-8") as f:
         f.write(json.dumps(record) + "\n")
