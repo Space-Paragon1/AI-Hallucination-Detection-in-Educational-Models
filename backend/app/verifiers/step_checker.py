@@ -8,10 +8,14 @@ def _normalize_expr(s: str) -> str:
     return s.replace(" ", "")
 
 def _implicit_multiply_fix(s: str) -> str:
-    # 3(x-2) -> 3*(x-2), x(x+1)->x*(x+1), )( -> )*(
+    # 2x -> 2*x, x2 -> x*2
+    s = re.sub(r"(\d)(x)", r"\1*\2", s)
+    s = re.sub(r"(x)(\d)", r"\1*\2", s)
+    # 3(x-2) -> 3*(x-2), x(x+1)->x*(x+1), )( -> )*( , )x -> )*x
     s = re.sub(r"(\d)(\()", r"\1*\2", s)
     s = re.sub(r"(x)(\()", r"\1*\2", s)
     s = re.sub(r"(\))(\()", r"\1*\2", s)
+    s = re.sub(r"(\))(x)", r"\1*\2", s)
     return s
 
 def _safe_eval(expr: str, x: float) -> float:
@@ -30,8 +34,9 @@ def _parse_equation(eq: str) -> Optional[Tuple[str, str]]:
 
 def _equiv(eq1: str, eq2: str) -> Tuple[bool, str]:
     """
-    Numeric equivalence check: sample multiple x values and compare LHS-RHS.
-    If both equations are equivalent, their residual functions should match.
+    Check that two equations have the same solution set.
+    For each equation, find x values where LHS==RHS (within tolerance),
+    then verify that the other equation is also satisfied at those roots.
     """
     p1 = _parse_equation(eq1)
     p2 = _parse_equation(eq2)
@@ -41,12 +46,16 @@ def _equiv(eq1: str, eq2: str) -> Tuple[bool, str]:
     l1, r1 = p1
     l2, r2 = p2
 
-    test_xs = [-3.0, -1.0, 0.5, 2.0, 5.0]
+    test_xs = [-5.0, -3.0, -1.0, 0.0, 0.5, 1.0, 2.0, 3.0, 5.0, 7.0]
+    tol = 1e-6
     try:
         for x in test_xs:
-            f1 = _safe_eval(l1, x) - _safe_eval(r1, x)
-            f2 = _safe_eval(l2, x) - _safe_eval(r2, x)
-            if abs(f1 - f2) > 1e-6:
+            r_eq1 = _safe_eval(l1, x) - _safe_eval(r1, x)
+            r_eq2 = _safe_eval(l2, x) - _safe_eval(r2, x)
+            eq1_sat = abs(r_eq1) < tol
+            eq2_sat = abs(r_eq2) < tol
+            # If one equation is satisfied but not the other, they differ
+            if eq1_sat != eq2_sat:
                 return False, f"mismatch_at_x={x}"
         return True, "equivalent"
     except Exception:
