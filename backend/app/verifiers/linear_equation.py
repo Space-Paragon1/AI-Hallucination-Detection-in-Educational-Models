@@ -1,26 +1,22 @@
 import re
-from typing import Tuple
+from typing import Tuple, Optional
+import sympy as sp
+from sympy.parsing.sympy_parser import (
+    parse_expr,
+    standard_transformations,
+    implicit_multiplication_application,
+)
 
-_SAFE = re.compile(r"^[0-9x\+\-\*\/\.\(\)]+$")
+_x = sp.Symbol("x")
+_TRANSFORMS = standard_transformations + (implicit_multiplication_application,)
+
 _EQ_RE = re.compile(r"(.+?)=(.+)")
 
 
-def _apply_implicit_multiply(s: str) -> str:
-    s = re.sub(r"(\d)(x)", r"\1*\2", s)
-    s = re.sub(r"(x)(\d)", r"\1*\2", s)
-    s = re.sub(r"(\d)(\()", r"\1*\2", s)
-    s = re.sub(r"(x)(\()", r"\1*\2", s)
-    s = re.sub(r"(\))(\()", r"\1*\2", s)
-    s = re.sub(r"(\))(x)", r"\1*\2", s)
-    return s
-
-
-def _extract_equation(text: str) -> str | None:
+def _extract_equation(text: str) -> Optional[str]:
     """Extract the math equation from question text, stripping prose prefixes."""
-    # If there's a colon, take everything after the last colon
     if ":" in text:
         text = text.rsplit(":", 1)[1]
-    # Strip common prefixes
     text = re.sub(r"(?i)^(solve|find|simplify|evaluate|compute)\b\s*", "", text.strip())
     text = re.sub(r"(?i)^for\s+[a-z]\s*:\s*", "", text.strip())
     text = text.strip()
@@ -29,41 +25,47 @@ def _extract_equation(text: str) -> str | None:
     return None
 
 
+def _to_sympy(expr: str) -> sp.Expr:
+    """Safely parse an expression string to SymPy using parse_expr (no eval)."""
+    expr = expr.strip().replace("^", "**")
+    return parse_expr(
+        expr,
+        local_dict={"x": _x},
+        transformations=_TRANSFORMS,
+    )
+
+
 def simple_linear_equation_plug_in(question: str, x_value: float) -> Tuple[bool, str]:
     """
-    Lightweight verifier:
-    - Looks for one equation '...=...' in the question
-    - Supports basic arithmetic with variable x: + - * / () and numbers
-    - Plugs x_value and checks equality
+    Verifies an algebra answer by substituting the claimed x_value
+    into the original equation and checking LHS == RHS.
+
+    Uses SymPy parse_expr (no eval) for safe expression parsing.
+    Supports multi-variable-style expressions but solves for x only.
     """
     eq_text = _extract_equation(question)
     if not eq_text:
         return False, "no_equation_found"
 
-    eq = eq_text.replace(" ", "")
-    eq = _apply_implicit_multiply(eq)
-
-    m = _EQ_RE.search(eq)
+    m = _EQ_RE.search(eq_text)
     if not m:
         return False, "no_equation_found"
 
-    left, right = m.group(1), m.group(2)
-
-    if not _SAFE.fullmatch(left):
-        return False, "left_not_supported"
-    if not _SAFE.fullmatch(right):
-        return False, "right_not_supported"
-
-    def safe_eval(expr: str, x: float) -> float:
-        expr = expr.replace("x", f"({x})")
-        return float(eval(expr, {"__builtins__": {}}, {}))
+    left_str = m.group(1).strip()
+    right_str = m.group(2).strip()
 
     try:
-        lv = safe_eval(left, x_value)
-        rv = safe_eval(right, x_value)
+        left_expr = _to_sympy(left_str)
+        right_expr = _to_sympy(right_str)
+    except Exception:
+        return False, "parse_failed"
+
+    try:
+        lv = float(left_expr.subs(_x, x_value))
+        rv = float(right_expr.subs(_x, x_value))
         ok = abs(lv - rv) < 1e-6
         if ok:
             return True, "plug_in_ok"
-        return False, f"plug_in_failed: {lv} != {rv}"
+        return False, f"plug_in_failed: {lv:.4f} != {rv:.4f}"
     except Exception:
         return False, "eval_failed"

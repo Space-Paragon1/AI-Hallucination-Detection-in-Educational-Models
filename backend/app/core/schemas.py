@@ -3,6 +3,8 @@ from typing import Optional, List, Dict, Any
 
 
 class ScoreRequest(BaseModel):
+    model_config = {"protected_namespaces": ()}
+
     question: str
     model_answer: str
     student_level: Optional[str] = None
@@ -17,6 +19,8 @@ class ScoreResponse(BaseModel):
 
 
 class FeedbackRequest(BaseModel):
+    model_config = {"protected_namespaces": ()}
+
     question: str
     model_answer: str
     student_level: Optional[str] = None

@@ -1,42 +1,40 @@
 import re
 from typing import List, Tuple, Optional
+import sympy as sp
+from sympy.parsing.sympy_parser import (
+    parse_expr,
+    standard_transformations,
+    implicit_multiplication_application,
+)
 
+_x = sp.Symbol("x")
+_TRANSFORMS = standard_transformations + (implicit_multiplication_application,)
 _EQ_RE = re.compile(r"(.+?)=(.+)")
-_ALLOWED = re.compile(r"^[0-9x\+\-\*\/\.\(\)]+$")
 
-def _normalize_expr(s: str) -> str:
-    return s.replace(" ", "")
 
-def _implicit_multiply_fix(s: str) -> str:
-    # 2x -> 2*x, x2 -> x*2
-    s = re.sub(r"(\d)(x)", r"\1*\2", s)
-    s = re.sub(r"(x)(\d)", r"\1*\2", s)
-    # 3(x-2) -> 3*(x-2), x(x+1)->x*(x+1), )( -> )*( , )x -> )*x
-    s = re.sub(r"(\d)(\()", r"\1*\2", s)
-    s = re.sub(r"(x)(\()", r"\1*\2", s)
-    s = re.sub(r"(\))(\()", r"\1*\2", s)
-    s = re.sub(r"(\))(x)", r"\1*\2", s)
-    return s
+def _to_sympy(expr: str) -> sp.Expr:
+    expr = expr.strip().replace("^", "**")
+    return parse_expr(expr, local_dict={"x": _x}, transformations=_TRANSFORMS)
 
-def _safe_eval(expr: str, x: float) -> float:
-    expr = expr.replace("x", f"({x})")
-    return float(eval(expr, {"__builtins__": {}}, {}))
 
-def _parse_equation(eq: str) -> Optional[Tuple[str, str]]:
-    eq = _implicit_multiply_fix(_normalize_expr(eq))
-    m = _EQ_RE.search(eq)
+def _parse_equation(eq: str) -> Optional[Tuple[sp.Expr, sp.Expr]]:
+    eq_clean = re.sub(r"\s+", "", eq)
+    m = _EQ_RE.search(eq_clean)
     if not m:
         return None
-    left, right = m.group(1), m.group(2)
-    if not _ALLOWED.fullmatch(left) or not _ALLOWED.fullmatch(right):
+    try:
+        left = _to_sympy(m.group(1))
+        right = _to_sympy(m.group(2))
+        return left, right
+    except Exception:
         return None
-    return left, right
+
 
 def _equiv(eq1: str, eq2: str) -> Tuple[bool, str]:
     """
-    Check that two equations have the same solution set.
-    For each equation, find x values where LHS==RHS (within tolerance),
-    then verify that the other equation is also satisfied at those roots.
+    Check if two equations are equivalent.
+    First tries symbolic simplification; falls back to numeric sampling.
+    Uses SymPy (no eval) for safe expression evaluation.
     """
     p1 = _parse_equation(eq1)
     p2 = _parse_equation(eq2)
@@ -46,44 +44,51 @@ def _equiv(eq1: str, eq2: str) -> Tuple[bool, str]:
     l1, r1 = p1
     l2, r2 = p2
 
+    # Symbolic check: (l1 - r1) == (l2 - r2) iff they represent the same equation
+    try:
+        diff = sp.simplify((l1 - r1) - (l2 - r2))
+        if diff == 0:
+            return True, "equivalent"
+    except Exception:
+        pass
+
+    # Numeric fallback across 10 test points
     test_xs = [-5.0, -3.0, -1.0, 0.0, 0.5, 1.0, 2.0, 3.0, 5.0, 7.0]
     tol = 1e-6
     try:
-        for x in test_xs:
-            r_eq1 = _safe_eval(l1, x) - _safe_eval(r1, x)
-            r_eq2 = _safe_eval(l2, x) - _safe_eval(r2, x)
+        for xv in test_xs:
+            r_eq1 = float((l1 - r1).subs(_x, xv))
+            r_eq2 = float((l2 - r2).subs(_x, xv))
             eq1_sat = abs(r_eq1) < tol
             eq2_sat = abs(r_eq2) < tol
-            # If one equation is satisfied but not the other, they differ
             if eq1_sat != eq2_sat:
-                return False, f"mismatch_at_x={x}"
+                return False, f"mismatch_at_x={xv}"
         return True, "equivalent"
     except Exception:
         return False, "eval_failed"
 
+
 def extract_equations_from_steps(answer: str) -> List[str]:
     """
     Extract equations from step-by-step answers.
-    Supports separators like '->', newlines, and chained '='.
+    Supports separators: '->', newlines, and chained '='.
     """
-    # split steps
     parts = re.split(r"(?:->|\n)+", answer)
     eqs: List[str] = []
     for p in parts:
         p = p.strip()
         if "=" in p:
-            # take the first equation-looking substring
-            m = _EQ_RE.search(p.replace(" ", ""))
+            m = _EQ_RE.search(re.sub(r"\s+", "", p))
             if m:
-                # reconstruct eq substring from normalized
                 eqs.append(p)
     return eqs
+
 
 def check_step_consistency(answer: str) -> Tuple[int, str]:
     """
     Returns:
-      step_ok: 1 if all consecutive equations are equivalent, else 0
-      note: explanation
+      (1, 'steps_consistent') if all consecutive equations are equivalent,
+      (0, note) otherwise.
     """
     eqs = extract_equations_from_steps(answer)
     if len(eqs) < 2:

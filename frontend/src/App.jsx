@@ -6,6 +6,27 @@ import HistoryPanel from "./components/HistoryPanel";
 import { scoreAnswer, healthCheck } from "./api/client";
 import "./App.css";
 
+function exportHistoryCSV(history) {
+  if (!history.length) return;
+  const headers = ["question", "model_answer", "risk", "label", "action", "reasons"];
+  const rows = history.map((item) => [
+    `"${item.question.replace(/"/g, '""')}"`,
+    `"${item.modelAnswer.replace(/"/g, '""')}"`,
+    item.result.risk.toFixed(4),
+    item.result.label,
+    item.result.action,
+    `"${item.result.reasons.join("; ").replace(/"/g, '""')}"`,
+  ]);
+  const csv = [headers.join(","), ...rows.map((r) => r.join(","))].join("\n");
+  const blob = new Blob([csv], { type: "text/csv;charset=utf-8;" });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = "hallucination_guard_session.csv";
+  a.click();
+  URL.revokeObjectURL(url);
+}
+
 export default function App() {
   const [result, setResult] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -43,12 +64,17 @@ export default function App() {
 
   return (
     <div className="app-layout">
-      <HistoryPanel history={history} onSelect={handleHistorySelect} />
+      <HistoryPanel
+        history={history}
+        onSelect={handleHistorySelect}
+        onExport={() => exportHistoryCSV(history)}
+      />
 
       <main className="main-content">
         <header className="app-header">
           <h1>Hallucination Guard</h1>
           <p className="subtitle">AI Math Answer Verification System</p>
+
           {backendUp === false && (
             <div className="banner banner-error">
               Backend is not reachable. Start the server with:{" "}

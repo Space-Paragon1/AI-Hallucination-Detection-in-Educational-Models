@@ -68,3 +68,24 @@ dist/
 # =========================
 .env
 .env.*
+
+# =========================
+# Claude Code
+# =========================
+.claude/
+
+# =========================
+# Experiment results
+# =========================
+experiments/results/
+
+# =========================
+# Frontend build
+# =========================
+frontend/dist/
+frontend/node_modules/
+
+# =========================
+# pytest cache
+# =========================
+.pytest_cache/

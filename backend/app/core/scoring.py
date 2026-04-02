@@ -1,15 +1,23 @@
-from typing import Dict, Any, Tuple
+from typing import Dict, Any, Tuple, Optional
 from backend.app.features.algebra_features import math_text_features, detect_final_answer
 from backend.app.verifiers.linear_equation import simple_linear_equation_plug_in
 from backend.app.verifiers.step_checker import check_step_consistency
 from backend.app.verifiers.calculus_verify import verify_calculus, detect_calc_kind
 
 
+def build_features(
+    question: str,
+    answer: str,
+    student_level: Optional[str] = None,
+) -> Dict[str, Any]:
+    """
+    Build the full feature dictionary for a question-answer pair.
+    Includes text/structural features, algebra verifier signals,
+    and calculus verifier signals.
+    """
+    feats = math_text_features(question, answer, student_level=student_level)
 
-def build_features(question: str, answer: str) -> Dict[str, Any]:
-    feats = math_text_features(question, answer)
-
-    # verifier signal (algebra)
+    # Algebra plug-in verifier
     final_found, final_val = detect_final_answer(answer)
     feats["eq_plug_ok"] = 0
     feats["eq_note"] = "n/a"
@@ -18,13 +26,15 @@ def build_features(question: str, answer: str) -> Dict[str, Any]:
         ok, note = simple_linear_equation_plug_in(question, float(final_val))
         feats["eq_plug_ok"] = int(ok)
         feats["eq_note"] = note
+
+    # Step consistency verifier
     step_ok, step_note = check_step_consistency(answer)
     feats["step_consistent"] = int(step_ok)
     feats["step_note"] = step_note
 
-    # calculus verifier
+    # Calculus symbolic verifier
     calc_kind = detect_calc_kind(question)
-    feats["calc_kind"] = calc_kind  # string used only for debugging/explanations
+    feats["calc_kind"] = calc_kind
     feats["calc_verified"] = 0
     feats["calc_note"] = "n/a"
 
@@ -36,30 +46,48 @@ def build_features(question: str, answer: str) -> Dict[str, Any]:
     return feats
 
 
-def heuristic_risk(features: Dict[str, Any]) -> float:
-    # ---------- Calculus-aware overrides ----------
+# Risk adjustment by student level: lower levels receive stricter gates
+# because a hallucination reaching a beginner is more harmful.
+_LEVEL_RISK_ADJUST = {
+    "pre-algebra": +0.10,
+    "algebra i":   +0.05,
+    "algebra ii":  +0.00,
+    "calculus":    -0.05,
+}
+
+
+def heuristic_risk(
+    features: Dict[str, Any],
+    student_level: Optional[str] = None,
+) -> float:
+    """
+    Compute a heuristic risk score (0.0–1.0) from symbolic verifier signals.
+    Falls back to text-pattern signals when symbolic verification is unavailable.
+    Applies a student-level adjustment (+0.10 for Pre-Algebra, -0.05 for Calculus).
+    """
     calc_kind = features.get("calc_kind", "unknown")
     calc_verified = int(features.get("calc_verified", 0))
     calc_note = str(features.get("calc_note", ""))
 
-    # 1) HARD OVERRIDE: symbolic mismatch = almost certainly wrong
+    # Calculus-first overrides
     if calc_kind != "unknown" and calc_verified == 0 and calc_note.endswith("mismatch"):
-        return 0.95
+        base = 0.95  # symbolic mismatch = almost certainly wrong
+    elif calc_kind != "unknown" and calc_verified == 1:
+        base = 0.20  # verified correct
+    elif calc_kind != "unknown" and not calc_note.endswith("mismatch"):
+        base = 0.55  # calculus detected but verifier could not parse — ask for clarification
 
-    # 2) If calculus is verified, keep risk low even if no steps were shown
-    if calc_kind != "unknown" and calc_verified == 1:
-        return 0.20
+    # Algebra / general rules
+    elif str(features.get("eq_note", "")).startswith("plug_in_failed"):
+        base = 0.90  # failed plug-in = very likely wrong
+    elif features.get("has_steps", 0) == 0:
+        base = 0.60  # no work shown
+    else:
+        base = 0.20  # looks okay
 
-    # 3) Calculus detected but verifier couldn't parse → ask to clarify
-    if calc_kind != "unknown" and calc_verified == 0 and not calc_note.endswith("mismatch"):
-        return 0.55
+    # Student-level adjustment
+    if student_level:
+        adj = _LEVEL_RISK_ADJUST.get(student_level.lower(), 0.0)
+        base = min(1.0, max(0.0, base + adj))
 
-    # ---------- Algebra / general rules ----------
-    if str(features.get("eq_note", "")).startswith("plug_in_failed"):
-        return 0.90
-
-    if features.get("has_steps", 0) == 0:
-        return 0.60
-
-    return 0.20
-
+    return base

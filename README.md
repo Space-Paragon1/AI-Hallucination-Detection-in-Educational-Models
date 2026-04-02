@@ -1,8 +1,7 @@
 # Hallucination Guard for Educational Math Models
 
-**Hallucination Guard** is a research-oriented system for **detecting, explaining, and mitigating hallucinations in AI tutoring models**, with support for **Algebra** and **Calculus**.
+**Hallucination Guard** is a research system for **detecting, explaining, and mitigating hallucinations in AI tutoring models**, with support for **Algebra** and **Calculus**.
 
-This project is part of a broader **AI + Education + Systems** research portfolio.
 The core idea is to place a *verification and risk-assessment layer* between an educational AI model and a student, reducing the likelihood that **confident but incorrect mathematical answers** are presented as truth.
 
 ---
@@ -14,22 +13,7 @@ Educational AI systems can produce answers that are:
 - Step-by-step and pedagogical
 - **Mathematically incorrect**
 
-In learning contexts, these hallucinations are especially harmful because:
-- Students may trust incorrect reasoning
-- Errors can compound over time
-- Models often fail *silently* without expressing uncertainty
-
-This project addresses that gap by detecting hallucination risk **before** an answer reaches the learner.
-
----
-
-## Project Goals
-
-- Detect hallucinated math answers using **verifiable signals**
-- Assign a **calibrated risk score** (0-1)
-- Provide **human-interpretable explanations** for why an answer is risky
-- Enforce **policies** (allow / ask / block) appropriate for educational settings
-- Build a system that scales cleanly from Algebra to Calculus to other STEM domains
+In learning contexts, these hallucinations are especially harmful because students may trust incorrect reasoning, errors compound over time, and models often fail *silently* without expressing uncertainty.
 
 ---
 
@@ -42,16 +26,16 @@ Question + Model Answer
 Feature Extraction (textual + math signals)
         |
         v
-Math Verifiers (Algebra + Calculus)
+Math Verifiers (Algebra + Calculus via SymPy)
         |
         v
-Risk Model (calibrated classifier)
+Risk Model (calibrated RandomForest classifier)
         |
         v
-Policy Engine (allow / clarify / block)
+Policy Engine — thresholds vary by student level
         |
         v
-Student-Safe Response
+Student-Safe Response (allow / clarify / block)
 ```
 
 ---
@@ -65,26 +49,29 @@ Student-Safe Response
 
 ### Calculus Verification
 - **Derivatives**: Symbolically differentiates and compares with the claimed answer (via SymPy)
-- **Integrals**: Differentiates the claimed antiderivative to verify
-- **Limits**: Evaluates limits symbolically and compares
+- **Indefinite integrals**: Differentiates the claimed antiderivative to verify correctness
+- **Definite integrals**: Numerically integrates bounds and compares with claimed value
+- **Limits**: Evaluates limits symbolically, handles `∞`, `-∞`, and DNE cases
 
 ### ML Risk Model
-- Logistic Regression with isotonic calibration
-- Trained on 480+ labeled examples (algebra + calculus)
-- Features: hedge words, confidence markers, step presence, numeric analysis
+- Best model: **RandomForest** (selected by 5-fold CV AUROC)
+- Trained on **480 labeled examples** (300 algebra + 180 calculus)
+- CV AUROC: **1.000** | Dev AUROC: **1.000** | Dev F1: **1.000**
+- Hybrid scoring: `risk = max(ml_risk, heuristic_risk)`
 
 ### Policy Engine
-- `risk >= 0.80` -> **block_and_verify** (high risk)
-- `risk >= 0.50` -> **ask_clarifying_or_verify** (medium risk)
-- `risk < 0.50` -> **allow** (low risk)
+- Thresholds tighten for lower student levels (Pre-Algebra is strictest)
+- `risk ≥ 0.80` → **block_and_verify**
+- `risk ≥ 0.50` → **ask_clarifying_or_verify**
+- `risk < 0.50` → **allow**
 
 ### React Frontend
-- Visual risk gauge (color-coded green/yellow/red)
-- Input form for question + model answer + student level
-- Action badge and interpretable reasons
-- Feedback buttons (correct / hallucinated)
-- Session history sidebar
-- Expandable feature details for debugging
+- Visual risk gauge (SVG, color-coded green/yellow/red) with ±2% confidence band
+- Input form: question, model answer, student level
+- Action badge and human-readable reason cards with icons
+- Feedback buttons (Correct / Hallucinated) with optional notes
+- Session history sidebar with CSV export
+- Expandable feature inspector for debugging
 
 ---
 
@@ -95,79 +82,106 @@ hallucination-detector/
 ├── backend/
 │   ├── app/
 │   │   ├── main.py              # FastAPI entrypoint (CORS enabled)
-│   │   ├── routers/             # API endpoints (/score, /feedback)
-│   │   ├── core/                # schemas, scoring, model loading
-│   │   ├── features/            # algebra feature extraction
-│   │   ├── verifiers/           # math verifiers (algebra, calculus)
-│   │   ├── policy/              # risk -> action logic
-│   │   └── data/                # train/dev datasets
-│   ├── models/                  # trained model artifacts (.joblib)
+│   │   ├── routers/             # /score and /feedback endpoints
+│   │   ├── core/                # schemas, scoring pipeline, model loading
+│   │   ├── features/            # text + structural feature extraction
+│   │   ├── verifiers/           # SymPy-based algebra & calculus verifiers
+│   │   ├── policy/              # risk → (label, action) + reason generation
+│   │   └── data/                # train.jsonl, dev.jsonl
+│   ├── models/                  # trained .joblib artifacts (git-ignored)
 │   └── requirements.txt
 ├── frontend/
 │   ├── src/
-│   │   ├── App.jsx              # Main app component
+│   │   ├── App.jsx              # Main app: state, history, CSV export
 │   │   ├── components/          # ScoreForm, ResultCard, FeedbackButton, HistoryPanel
-│   │   └── api/client.js        # API client for /score and /feedback
-│   ├── index.html
+│   │   └── api/client.js        # HTTP client for /score and /feedback
 │   └── package.json
 ├── experiments/
-│   ├── train.py                 # Model training
-│   ├── eval.py                  # Evaluation scripts
-│   └── ablation.py              # Feature ablation study
+│   ├── run_all.sh               # Full pipeline: merge → train → eval → ablation
+│   ├── merge_datasets.py        # Combine sources, 80/20 stratified split
+│   ├── train.py                 # 5-fold CV, 3 model comparison, save best
+│   ├── eval.py                  # Dev evaluation with per-domain breakdowns
+│   ├── ablation.py              # Feature importance study
+│   ├── retrain_from_feedback.py # Active learning from user feedback
+│   └── results/                 # Output metrics (git-ignored)
 ├── tests/
-│   ├── conftest.py              # pytest fixtures
-│   ├── test_score_endpoint.py   # API endpoint tests
+│   ├── conftest.py
+│   ├── test_score_endpoint.py
 │   ├── test_feedback_endpoint.py
-│   ├── test_verifiers.py        # Algebra verifier unit tests
-│   ├── test_policy.py           # Policy engine tests
-│   └── test_features.py         # Feature extraction tests
+│   ├── test_verifiers.py
+│   ├── test_policy.py
+│   └── test_features.py
+├── docs/
+│   ├── architecture.md
+│   ├── dataset.md
+│   ├── experiments.md
+│   └── model_card.md
+├── Dockerfile
+├── Makefile
 └── README.md
 ```
 
 ---
 
-## Running the Project
+## Quick Start
 
 ### Requirements
-- **Python 3.10+**
-- **Node.js 18+**
+- Python 3.10+
+- Node.js 18+
 
-### Backend Setup
+### Setup
+
 ```bash
+# 1. Create and activate virtual environment
 python -m venv .venv
-source .venv/bin/activate  # or .\.venv\Scripts\Activate.ps1 on Windows
+source .venv/bin/activate        # macOS/Linux
+# .\.venv\Scripts\Activate.ps1   # Windows PowerShell
+
+# 2. Install Python dependencies
 pip install -r backend/requirements.txt
+pip install pytest httpx          # for tests
 
-# Start the API
-uvicorn backend.app.main:app --reload
+# 3. Install frontend dependencies
+make install
 ```
 
-### Frontend Setup
+### Running
+
 ```bash
-cd frontend
-npm install
-npm run dev
+make serve       # Start backend  →  http://localhost:8000
+make frontend    # Start frontend →  http://localhost:5173
 ```
 
-The frontend runs at `http://localhost:5173` and the backend API at `http://localhost:8000`.
+### Testing
 
-### Running Tests
 ```bash
-pip install pytest httpx
-python -m pytest tests/ -v
+make test        # Run all 37 backend tests
+make smoke       # Quick API smoke test (requires backend running)
 ```
 
-### Useful Endpoints
-- Health check: `GET http://localhost:8000/health`
-- Interactive API docs: `http://localhost:8000/docs`
-- Score an answer: `POST http://localhost:8000/score`
-- Submit feedback: `POST http://localhost:8000/feedback`
+### ML Pipeline
+
+```bash
+make train       # merge → train → eval → ablation  (full pipeline)
+make retrain     # Retrain from collected user feedback
+```
 
 ---
 
-## Example Request
+## API
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| `GET`  | `/health` | Backend health check |
+| `POST` | `/score` | Score a question/answer pair |
+| `POST` | `/feedback` | Submit a correction label |
+
+Interactive docs: `http://localhost:8000/docs`
+
+### Example Request
 
 ```json
+POST /score
 {
   "question": "Solve for x: 2x + 5 = 17",
   "model_answer": "2x + 5 = 17 -> 2x = 10 -> x = 5",
@@ -176,6 +190,7 @@ python -m pytest tests/ -v
 ```
 
 ### Example Response
+
 ```json
 {
   "risk": 0.91,
@@ -190,29 +205,29 @@ python -m pytest tests/ -v
 
 ---
 
-## Evaluation Metrics
-- AUROC (hallucination detection)
-- F1 score
-- Calibration quality (risk ~ true error rate)
-- False-positive cost (blocking correct answers)
-- False-negative cost (allowing hallucinations)
+## Ablation Summary
+
+| Configuration | Dev AUROC | Dev F1 |
+|---|---|---|
+| Full model | 1.000 | 1.000 |
+| No step verifier | 1.000 | 1.000 |
+| No calc verifier | 1.000 | 1.000 |
+| **No verifiers** | **0.910** | **0.877** |
+| **Text only** | **0.910** | **0.877** |
+
+Symbolic verifiers (`eq_plug_ok`, `step_consistent`) are the most important features — removing them drops F1 by ~12 points.
+
+---
+
+## Docker
+
+```bash
+docker build -t hallucination-guard .
+docker run -p 8000:8000 hallucination-guard
+```
 
 ---
 
 ## Research Positioning
 
-This project sits at the intersection of:
-- AI Safety
-- Educational Technology
-- ML Systems
-- Human-Centered AI
-
-It is designed to be:
-- Reproducible
-- Interpretable
-- Extensible
-- Grounded in verifiable mathematics
-
----
-
-THIS PROJECT IS STILL IN PROGRESS.
+This project sits at the intersection of AI Safety, Educational Technology, ML Systems, and Human-Centered AI. It is designed to be reproducible, interpretable, extensible, and grounded in verifiable mathematics.
